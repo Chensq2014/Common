@@ -1,0 +1,15 @@
+D:\Projects\Common\Common.Entities\bin\Debug\net8.0\Common.Entities.deps.json
+D:\Projects\Common\Common.Entities\bin\Debug\net8.0\Common.Entities.dll
+D:\Projects\Common\Common.Entities\bin\Debug\net8.0\Common.Entities.pdb
+D:\Projects\Common\Common.Entities\bin\Debug\net8.0\Common.Shared.dll
+D:\Projects\Common\Common.Entities\bin\Debug\net8.0\Common.Shared.pdb
+D:\Projects\Common\Common.Entities\obj\Debug\net8.0\Common.Entities.csproj.AssemblyReference.cache
+D:\Projects\Common\Common.Entities\obj\Debug\net8.0\Common.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Common\Common.Entities\obj\Debug\net8.0\Common.Entities.AssemblyInfoInputs.cache
+D:\Projects\Common\Common.Entities\obj\Debug\net8.0\Common.Entities.AssemblyInfo.cs
+D:\Projects\Common\Common.Entities\obj\Debug\net8.0\Common.Entities.csproj.CoreCompileInputs.cache
+D:\Projects\Common\Common.Entities\obj\Debug\net8.0\Common.Entities.csproj.CopyComplete
+D:\Projects\Common\Common.Entities\obj\Debug\net8.0\Common.Entities.dll
+D:\Projects\Common\Common.Entities\obj\Debug\net8.0\refint\Common.Entities.dll
+D:\Projects\Common\Common.Entities\obj\Debug\net8.0\Common.Entities.pdb
+D:\Projects\Common\Common.Entities\obj\Debug\net8.0\ref\Common.Entities.dll

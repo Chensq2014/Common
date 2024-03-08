@@ -1,2 +1,0 @@
-obj\Debug\netcoreapp3.1\Protos/Lesson.cs \
-obj\Debug\netcoreapp3.1\Protos/LessonGrpc.cs: Protos/lesson.proto

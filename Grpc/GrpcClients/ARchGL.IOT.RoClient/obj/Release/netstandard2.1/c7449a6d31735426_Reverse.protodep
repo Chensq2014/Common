@@ -1,2 +1,0 @@
-obj\Release\netstandard2.1/Reverse.cs \
-obj\Release\netstandard2.1/ReverseGrpc.cs: ../../Protos/Reverse.proto

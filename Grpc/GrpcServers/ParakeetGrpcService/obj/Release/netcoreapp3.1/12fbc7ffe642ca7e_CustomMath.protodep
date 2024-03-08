@@ -1,3 +1,0 @@
-obj\Release\netcoreapp3.1\Protos/CustomMath.cs \
-obj\Release\netcoreapp3.1\Protos/CustomMathGrpc.cs: C:/Users/parakeet/.nuget/packages/grpc.tools/2.31.0/build/native/include/google/protobuf/empty.proto\
- Protos/CustomMath.proto

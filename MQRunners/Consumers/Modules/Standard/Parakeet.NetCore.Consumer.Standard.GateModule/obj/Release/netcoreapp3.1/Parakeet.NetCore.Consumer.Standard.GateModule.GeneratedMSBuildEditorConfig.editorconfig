@@ -1,3 +1,0 @@
-is_global = true
-build_property.RootNamespace = Parakeet.NetCore.Consumer.Standard.GateModule
-build_property.ProjectDir = D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Consumers\Modules\Standard\Parakeet.NetCore.Consumer.Standard.GateModule\

@@ -1,5 +1,0 @@
-is_global = true
-build_property.RootNamespace = Parakeet.NetCore.Producer.Tcp
-build_property.ProjectDir = D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Producers\Modules\Tcp\Parakeet.NetCore.Producer.Tcp\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 

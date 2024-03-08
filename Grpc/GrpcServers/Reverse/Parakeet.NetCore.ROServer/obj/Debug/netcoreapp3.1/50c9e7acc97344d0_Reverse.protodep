@@ -1,2 +1,0 @@
-obj\Debug\netcoreapp3.1/Reverse.cs \
-obj\Debug\netcoreapp3.1/ReverseGrpc.cs: ../../../Protos/Reverse.proto

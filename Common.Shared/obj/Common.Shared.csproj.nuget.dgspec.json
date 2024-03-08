@@ -71,6 +71,14 @@
               "target": "Package",
               "version": "[1.9.2, )"
             },
+            "IdGen": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Irony.NetCore": {
+              "target": "Package",
+              "version": "[1.1.11, )"
+            },
             "MiniExcel": {
               "target": "Package",
               "version": "[1.31.3, )"
@@ -90,6 +98,10 @@
             "PinYinConverterCore": {
               "target": "Package",
               "version": "[1.0.2, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.3.9, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",
@@ -130,6 +142,10 @@
             "Volo.Abp.Ddd.Domain": {
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "ZKWeb.System.Drawing": {
+              "target": "Package",
+              "version": "[4.0.1, )"
             }
           },
           "imports": [
@@ -169,6 +185,14 @@
               "target": "Package",
               "version": "[1.9.2, )"
             },
+            "IdGen": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Irony.NetCore": {
+              "target": "Package",
+              "version": "[1.1.11, )"
+            },
             "MiniExcel": {
               "target": "Package",
               "version": "[1.31.3, )"
@@ -194,6 +218,10 @@
             "PinYinConverterCore": {
               "target": "Package",
               "version": "[1.0.2, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.3.9, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",
@@ -234,6 +262,10 @@
             "Volo.Abp.Ddd.Domain": {
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "ZKWeb.System.Drawing": {
+              "target": "Package",
+              "version": "[4.0.1, )"
             }
           },
           "imports": [
@@ -268,6 +300,14 @@
               "target": "Package",
               "version": "[1.9.2, )"
             },
+            "IdGen": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Irony.NetCore": {
+              "target": "Package",
+              "version": "[1.1.11, )"
+            },
             "MiniExcel": {
               "target": "Package",
               "version": "[1.31.3, )"
@@ -287,6 +327,10 @@
             "PinYinConverterCore": {
               "target": "Package",
               "version": "[1.0.2, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.3.9, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",
@@ -327,6 +371,10 @@
             "Volo.Abp.Ddd.Domain": {
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "ZKWeb.System.Drawing": {
+              "target": "Package",
+              "version": "[4.0.1, )"
             }
           },
           "imports": [

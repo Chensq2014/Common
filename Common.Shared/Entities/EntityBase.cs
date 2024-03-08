@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using Common.Extensions;
 using MiniExcelLibs.Attributes;
 using Volo.Abp.Auditing;
 using Volo.Abp.Data;
@@ -27,6 +28,8 @@ namespace Common.Entities
         IAggregateRoot<TKey>,
         IGeneratesDomainEvents
     {
+        #region 属性字段
+
         /// <summary>
         /// 主键Id
         /// </summary>
@@ -108,9 +111,12 @@ namespace Common.Entities
         private readonly ICollection<DomainEventRecord> _distributedEvents = new Collection<DomainEventRecord>();
         private readonly ICollection<DomainEventRecord> _localEvents = new Collection<DomainEventRecord>();
 
+        #endregion
+
+
         protected EntityBase()
         {
-            ConcurrencyStamp = Guid.NewGuid().ToString("N");
+            ConcurrencyStamp = GuidExtensions.NewIdString();
             ExtraProperties = new ExtraPropertyDictionary();
             this.SetDefaultsForExtraProperties();
         }
@@ -118,7 +124,7 @@ namespace Common.Entities
         protected EntityBase(TKey id)
         {
             Id = id;
-            ConcurrencyStamp = Guid.NewGuid().ToString("N");
+            ConcurrencyStamp = GuidExtensions.NewIdString();
             ExtraProperties = new ExtraPropertyDictionary();
             this.SetDefaultsForExtraProperties();
             EntityHelper.TrySetTenantId(this);
@@ -152,8 +158,7 @@ namespace Common.Entities
             //interpolatedStringHandler.AppendLiteral("] Id = ");
             //interpolatedStringHandler.AppendFormatted<TKey>(this.Id);
             //return interpolatedStringHandler.ToStringAndClear();
-            return "[ENTITY: " + this.GetType().Name + "] Keys = " +
-                   this.GetKeys().JoinAsString<object>(", ");
+            return $"[ENTITY: {GetType().Name}] Keys = {GetKeys().JoinAsString(", ")}";
         }
         public virtual IEnumerable<ValidationResult> Validate(
             ValidationContext validationContext)

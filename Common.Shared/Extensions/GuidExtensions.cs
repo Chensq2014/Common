@@ -15,5 +15,15 @@ namespace Common.Extensions
         {
             return BitConverter.ToInt64(Guid.NewGuid().ToByteArray(),0);
         }
+
+        /// <summary>
+        /// NewIdString  
+        /// </summary>
+        /// <returns></returns>
+        public static string NewIdString()
+        {
+            return GuidExtensions.NewIdString();
+        }
+
     }
 }

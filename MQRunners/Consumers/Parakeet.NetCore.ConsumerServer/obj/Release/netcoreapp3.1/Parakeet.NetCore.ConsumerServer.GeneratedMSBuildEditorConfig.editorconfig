@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = Parakeet.NetCore.ConsumerServer
+build_property.ProjectDir = D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Consumers\Parakeet.NetCore.ConsumerServer\

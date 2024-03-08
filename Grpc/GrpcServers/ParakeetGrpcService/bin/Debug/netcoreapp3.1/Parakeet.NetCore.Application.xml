@@ -1,0 +1,4587 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Parakeet.NetCore.Application</name>
+    </assembly>
+    <members>
+        <member name="T:Parakeet.NetCore.Aop.CacheLockInterceptor">
+            <summary>
+            允许依赖注入的缓存锁拦截器 (继承自IAbpInterceptor)
+            拦截器的注册工具类AuditingInterceptorRegistrar(静态类)被CLR自动调用时,拦截器容器中的这些拦截器被实例化?待验证
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.Aop.CacheLockInterceptor.CurrentUser">
+            <summary>
+            当前登录人 abp框架IdentityServer自动获取
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.Aop.CacheLockInterceptor.LockAttribute">
+            <summary>
+            方法上的用户自定义锁定属性,使用此属性的方法会进行lock
+            </summary>
+        </member>
+        <member name="F:Parakeet.NetCore.Aop.CacheLockInterceptor._lock">
+            <summary>
+            自定义业务锁
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Aop.CacheLockInterceptor.#ctor(Parakeet.NetCore.Locks.ILock)">
+            <summary>
+            拦截器构造函数依赖注入自定义锁
+            </summary>
+            <param name="lock"></param>
+        </member>
+        <member name="M:Parakeet.NetCore.Aop.CacheLockInterceptor.InterceptAsync(Volo.Abp.DynamicProxy.IAbpMethodInvocation)">
+            <summary>
+            异步执行
+            </summary>
+            <param name="invocation"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Aop.CacheLockInterceptorRegistrar">
+            <summary>
+            添加到模块的预加载方法中注册 
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Aop.CacheLockInterceptorRegistrar.Register(Volo.Abp.DependencyInjection.IOnServiceRegistredContext)">
+            <summary>
+            把拦截器注入到
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Parakeet.NetCore.Aop.CustomServerLoggerInterceptor.UnaryServerHandler``2(``0,Grpc.Core.ServerCallContext,Grpc.Core.UnaryServerMethod{``0,``1})">
+            <summary>
+            简单RPC--异步式调用
+            </summary>
+            <typeparam name="TRequest"></typeparam>
+            <typeparam name="TResponse"></typeparam>
+            <param name="request"></param>
+            <param name="context"></param>
+            <param name="continuation"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.AreaTenants.AreaTenantAppService">
+            <summary>
+            区域租户及租户连接字符串管理
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.AreaTenants.AreaTenantAppService.GetGet(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            获取Get(扩展) 提供给devExtreme
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.AreaTenants.AreaTenantAppService.GetTenantDbConnectionString(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            获取租户所有区域连接字符串分页集合
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.AreaTenants.AreaTenantAppService.InsertTenantDbConnectionString">
+            <summary>
+            添加连接串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.AreaTenants.AreaTenantAppService.UpdateTenantDbConnectionString">
+            <summary>
+            Update修改连接串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.AreaTenants.AreaTenantAppService.DeleteTenantDbConnectionString">
+            <summary>
+            根据主键Id删除连接串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.AreaTenants.IAreaTenantAppService">
+            <summary>
+            区域租户及租户连接字符串管理
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.AreaTenants.IAreaTenantAppService.GetTenantDbConnectionString(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            获取租户所有区域连接字符串分页集合
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.AreaTenants.IAreaTenantAppService.InsertTenantDbConnectionString">
+            <summary>
+            添加连接串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.AreaTenants.IAreaTenantAppService.UpdateTenantDbConnectionString">
+            <summary>
+            Update修改连接串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.AreaTenants.IAreaTenantAppService.DeleteTenantDbConnectionString">
+            <summary>
+            根据主键Id删除连接串
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Parakeet.NetCore.BackgroundWorks.ClearTempDataBackgroundWorker" -->
+        <member name="F:Parakeet.NetCore.BackgroundWorks.ClearTempDataBackgroundWorker.IntervalSeconds">
+            <summary>
+            一小时/天的 间隔时间段毫秒数
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.BackgroundWorks.ClearTempDataBackgroundWorker.#ctor(Volo.Abp.Threading.AbpTimer,Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)">
+            <summary>
+            IInteractiveAppService interactiveAppService, 
+            </summary>
+            <param name="timer"></param>
+            <param name="serviceScopeFactory"></param>
+        </member>
+        <member name="M:Parakeet.NetCore.BackgroundWorks.ClearTempDataBackgroundWorker.DoWork(Volo.Abp.BackgroundWorkers.PeriodicBackgroundWorkerContext)">
+            <summary>
+            每隔IntervalSeconds 时间后定时调度的方法
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.BackgroundWorks.CustomBackgroundJob">
+            <summary>
+            自定义后台任务 BackgroundService基于IHostedService
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.BackgroundWorks.CustomBackgroundJob.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            持续运行的后台任务执行方法
+            </summary>
+            <param name="stoppingToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BackgroundWorks.CustomBackgroundJob.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.BackgroundWorks.DeviceAnalogRuleBackgroundTaskService">
+            <summary>
+            数据模拟规则后台任务服务
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.BackgroundWorks.XiamenHuizhanBackGroundWorker">
+            <summary>
+            厦门会展请求服务 url会根据设备编码等规则变化，使用httpClient动态请求
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.BackgroundWorks.XiamenHuizhanBackGroundWorker.SectionOneEnvironmentRealTimeRequest(Parakeet.NetCore.Dtos.RequestParameterDto)">
+            <summary>
+            一标段环境设备实时数据请求
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BackgroundWorks.XiamenHuizhanBackGroundWorker.SectionOneGateHistoryRequest(Parakeet.NetCore.Dtos.RequestParameterDto)">
+            <summary>
+            一标段考勤历史记录请求
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BackgroundWorks.XiamenHuizhanBackGroundWorker.SectionTwoEnvironmentRealTimeRequest(Parakeet.NetCore.Dtos.RequestParameterDto)">
+            <summary>
+            二标段环境设备实时数据请求
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BackgroundWorks.XiamenHuizhanBackGroundWorker.SectionTwoGateHistoryRequest(Parakeet.NetCore.Dtos.RequestParameterDto)">
+            <summary>
+            2标段考勤历史记录请求
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.BackgroundWorks.XiamenHuizhanSectionTwoGateHistroryBackGroundWroker">
+            <summary>
+            厦门会展二标段考勤历史记录请求服务 url会根据设备编码等规则变化，使用httpClient动态请求
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.BackgroundWorks.XiamenHuizhanSectionTwoGateHistroryBackGroundWroker.SectionTwoGateHistoryRequest(Parakeet.NetCore.Dtos.RequestParameterDto)">
+            <summary>
+            2标段考勤历史记录请求
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.BaseNetCoreAppService`2">
+            <summary>
+            基类AppService
+            </summary>
+            <typeparam name="TEntity">实体类</typeparam>
+            <typeparam name="TPrimaryKey">实体类主键类型</typeparam>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.GetBaseRepository">
+            <summary>
+            获取实体BaseRepository
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.GetAll">
+            <summary>
+            获取实体Queryable
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            表达式目录树filter参数过滤数据 仅提供内部调用 不生成api
+            </summary>
+            <param name="filter">表达式目录树</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.GetByPrimaryKey(Parakeet.NetCore.Dtos.InputIdDto{`1})">
+            <summary>
+            根据主键获取实体
+            </summary>
+            <param name="input">实体主键输入类</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.GetGet(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            默认GetGet 获取GridData 提供给devExtreme
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.GridData(Parakeet.NetCore.Dtos.LoadOptionInputDto)">
+            <summary>
+            获取GridData Post
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.GridDto``1">
+            <summary>
+            按创建时间降序直接获取全部数据 泛型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.GetPagedResult``1(Parakeet.NetCore.Dtos.PagedInputDto)">
+            <summary>
+             获取列表数据(分页) 泛型 ()
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.InsertInsert">
+            <summary>
+            添加实体 提供给devExtreme 前端控件验证实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.InsertWithDto``1">
+            <summary>
+            添加实体 提供给devExtreme 前端控件验证实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.BulkInsert">
+            <summary>
+            添加实体 提供给devExtreme 前端控件一次性提交多个实体
+            注意控件默认工作方式并不是这样工作的
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.BulkInsertAsync(System.Collections.Generic.IList{`0})">
+            <summary>
+            批量添加实体
+            </summary>
+            <param name="entities">实体集</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.UpdateUpdate">
+            <summary>
+            UpdateUpdate修改实体 提供给devExtreme,前端控件验证实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.DeleteDelete">
+            <summary>
+            根据主键Id删除实体 DeleteDelete 默认提供给devExtreme
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.DeleteByPrimaryKey(Parakeet.NetCore.Dtos.InputIdDto{`1})">
+            <summary>
+            根据主键Id删除实体
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.BulkDeleteByPrimaryKeies(Parakeet.NetCore.Dtos.InputIdsDto{`1})">
+            <summary>
+            根据Ids批量删除实体 sqlserver
+            </summary>
+            <param name="input">实体主键集合</param>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.BulkDeleteAsync(System.Collections.Generic.IList{`0})">
+            <summary>
+            批量删除实体集 sqlserver
+            </summary>
+            <param name="entities">实体集</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.CheckField(Parakeet.NetCore.Dtos.FieldCheckOptionInputDto{`1})">
+            <summary>
+            单字段重复性验证
+            </summary>
+            <param name="input">单个字段选项</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.CheckFields(Parakeet.NetCore.Dtos.FieldsCheckOptionInputDto{`1})">
+            <summary>
+            多字段重复性验证，dxGrid在新建/编辑数据时 时时验证
+            </summary>
+            <param name="input">多字段dto选项</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.DJson">
+            <summary>
+            返回null json对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.DJson(System.Object)">
+            <summary>
+            返回object json数据对象
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.SJson">
+            <summary>
+            返回成功status和msg的对象消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.SJson(System.Object)">
+            <summary>
+            返回成功status和msg的对象消息和Data对象数据
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.EJson(System.Object)">
+            <summary>
+            返回错误status和msg消息+Data对象
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.RJson(System.Boolean,System.String)">
+            <summary>
+            提供给返回字符串专用
+            </summary>
+            <param name="status"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.GetValues``1">
+            <summary>
+            从HttpContext Form获取values对象字符串转为泛型实体
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.GetItemValues``1">
+            <summary>
+            根据Form values对象字符串转泛型对象
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.GetValues``1(System.String)">
+            <summary>
+            根据values对象字符串转泛型对象
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="valueString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.GetValuesString">
+            <summary>
+            从httpcontext Form获取values对象字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.GetValuesQueryString">
+            <summary>
+            从httpcontext Query获取values对象字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.GetInputQueryString">
+            <summary>
+            从httpcontext Query获取input对象字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.GetTPrimaryKey(System.String)">
+            <summary>
+            获取主键string转int/guid 注意TPrimaryKey非int?与guid？
+            </summary>
+            <param name="key">主键字符串</param>
+            <returns>主键类型值</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.GetKeyString">
+            <summary>
+            获取key字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.GetPostId">
+            <summary>
+            获取PostId
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.BaseNetCoreAppService`2.GetQueryId">
+            <summary>
+            获取Request.Query["id"]
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.BaseNetCoreAppService`1">
+            <summary>
+            基类Appservices 
+            </summary>
+            <typeparam name="TEntity">实体类</typeparam>
+        </member>
+        <member name="M:Parakeet.NetCore.CustomerAppService.GetHttpContext">
+            <summary>
+            获取请求httpContent
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.CustomerAppService.GetRequestPrimarykey">
+            <summary>
+            获取请求url/formbody上的Id或者key
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.CustomerAppService.GetRequestPrimarykeyString">
+            <summary>
+            获取请求url/formbody上的Id或者key 字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.CustomerAppService.GetFormValuesString">
+            <summary>
+            从httpcontext FormBody获取values对象字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.DeviceAnalogRules.DeviceAnalogRuleAppService">
+            <summary>
+            设备规则服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.DeviceAnalogRuleAppService.GetGet(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            获取Get(扩展) 提供给devExtreme
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.DeviceAnalogRuleAppService.GetDeviceRulesByDeviceId(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            获取陕设备所有数据规则分页集合
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.DeviceAnalogRuleAppService.GetAsync(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            根据Id获取规则
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.DeviceAnalogRuleAppService.GetPageListAsync(Parakeet.NetCore.Dtos.GetDeviceAnalogRuleListInput)">
+            <summary>
+            获取规则数据分页
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.DeviceAnalogRuleAppService.GetFilterListAsync(Parakeet.NetCore.Dtos.GetDeviceAnalogRuleBaseInput)">
+            <summary>
+            获取规则数据不分页
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.DeviceAnalogRuleAppService.CreateAsync(Parakeet.NetCore.Dtos.CreateUpdateDeviceAnalogRuleInput)">
+            <summary>
+            创建规则
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.DeviceAnalogRuleAppService.UpdateAsync(Parakeet.NetCore.Dtos.CreateUpdateDeviceAnalogRuleInput)">
+            <summary>
+            更新规则
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.DeviceAnalogRuleAppService.CreateOrUpdateAsync(Parakeet.NetCore.Dtos.CreateUpdateDeviceAnalogRuleInput)">
+            <summary>
+            创建/更新规则
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.DeviceAnalogRuleAppService.DeleteAsync(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            根据Id删除规则
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.DeviceAnalogRuleAppService.SetEnabled(Parakeet.NetCore.Dtos.DeviceAnalogRuleEnabledInputDto)">
+            <summary>
+            规则启用禁用
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.DeviceAnalogRuleAppService.UpdateLastSendTimeAsync(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            更新LastSendTime
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.DeviceAnalogRules.IDeviceAnalogRuleAppService">
+            <summary>
+            设备模拟数据规则服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.IDeviceAnalogRuleAppService.GetAsync(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            根据Id获取规则
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.IDeviceAnalogRuleAppService.GetPageListAsync(Parakeet.NetCore.Dtos.GetDeviceAnalogRuleListInput)">
+            <summary>
+            获取规则数据分页
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.IDeviceAnalogRuleAppService.GetFilterListAsync(Parakeet.NetCore.Dtos.GetDeviceAnalogRuleBaseInput)">
+            <summary>
+            获取规则数据不分页
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.IDeviceAnalogRuleAppService.CreateAsync(Parakeet.NetCore.Dtos.CreateUpdateDeviceAnalogRuleInput)">
+            <summary>
+            创建规则
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.IDeviceAnalogRuleAppService.UpdateAsync(Parakeet.NetCore.Dtos.CreateUpdateDeviceAnalogRuleInput)">
+            <summary>
+            更新规则
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.IDeviceAnalogRuleAppService.CreateOrUpdateAsync(Parakeet.NetCore.Dtos.CreateUpdateDeviceAnalogRuleInput)">
+            <summary>
+            创建/更新规则
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.IDeviceAnalogRuleAppService.DeleteAsync(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            根据Id删除规则
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.IDeviceAnalogRuleAppService.SetEnabled(Parakeet.NetCore.Dtos.DeviceAnalogRuleEnabledInputDto)">
+            <summary>
+            规则启用禁用
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.DeviceAnalogRules.IDeviceAnalogRuleAppService.UpdateLastSendTimeAsync(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            更新LastSendTime
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService">
+            <summary>
+            阿里云邮件服务
+            https://dm.console.aliyun.com/#/directmail/Home/cn-hangzhou
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.GetAlibabaDmClient">
+            <summary>
+            获取阿里云邮件服务客户端
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.AccountTest">
+            <summary>
+            阿里ak-sk账号测试 获取账户信息
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.CreateDomain(Parakeet.NetCore.Dtos.DomainConfigDto)">
+            <summary>
+            创建域名
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.QueryDomainByParam(Parakeet.NetCore.Dtos.QueryDomainByParamDto)">
+            <summary>
+            根据关键字查询域名
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.DeleteDomain(Parakeet.NetCore.Dtos.DomainConfigDto)">
+            <summary>
+            删除域名
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.CheckDomain(Parakeet.NetCore.Dtos.DomainConfigDto)">
+            <summary>
+            验证域名
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.DescDomain(Parakeet.NetCore.Dtos.DomainConfigDto)">
+            <summary>
+            配置域名
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.CreateMailAddress(AlibabaCloud.SDK.Dm20151123.Models.CreateMailAddressRequest)">
+            <summary>
+            创建发信地址 CreateMailAddressRequest
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.DeleteMailAddress(AlibabaCloud.SDK.Dm20151123.Models.DeleteMailAddressRequest)">
+            <summary>
+            删除发信地址 DeleteMailAddressWithOptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.ModifyPWByDomain(AlibabaCloud.SDK.Dm20151123.Models.ModifyPWByDomainRequest)">
+            <summary>
+            设置发信地址SMTP密码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.UpdateMailAddressMsgCallBackUrl(AlibabaCloud.SDK.Dm20151123.Models.UpdateMailAddressMsgCallBackUrlRequest)">
+            <summary>
+            设置发信地址的通知地址 UpdateMailAddressMsgCallBackUrlWithOptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.QueryInvalidAddress(AlibabaCloud.SDK.Dm20151123.Models.QueryInvalidAddressRequest)">
+            <summary>
+            查询无效地址 QueryInvalidAddressWithOptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.QueryMailAddressByParam(AlibabaCloud.SDK.Dm20151123.Models.QueryMailAddressByParamRequest)">
+            <summary>
+            根据参数查询邮件地址 QueryMailAddressByParamWithOptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.ApproveReplyMailAddress(AlibabaCloud.SDK.Dm20151123.Models.ApproveReplyMailAddressRequest)">
+            <summary>
+            验证回信地址 ApproveReplyMailAddressWithOptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.CheckReplyToMailAddress(AlibabaCloud.SDK.Dm20151123.Models.CheckReplyToMailAddressRequest)">
+            <summary>
+            验证回信地址发送邮件 CheckReplyToMailAddressWithOptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.CreateReceiver(AlibabaCloud.SDK.Dm20151123.Models.CreateReceiverRequest)">
+            <summary>
+            创建收件人列表 CreateReceiverWithOptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.DeleteReceiver(AlibabaCloud.SDK.Dm20151123.Models.DeleteReceiverRequest)">
+            <summary>
+            删除收件人列表 DeleteReceiverWithOptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.DeleteReceiverDetail(AlibabaCloud.SDK.Dm20151123.Models.DeleteReceiverDetailRequest)">
+            <summary>
+            删除单个收件人 DeleteReceiverDetailWithOptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.QueryReceiverByParam(AlibabaCloud.SDK.Dm20151123.Models.QueryReceiverByParamRequest)">
+            <summary>
+            查询收件人列表 QueryReceiverByParamWithOptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.QueryReceiverDetail(AlibabaCloud.SDK.Dm20151123.Models.QueryReceiverDetailRequest)">
+            <summary>
+            查询收件人 QueryReceiverDetailWithOptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.SaveReceiverDetail(AlibabaCloud.SDK.Dm20151123.Models.SaveReceiverDetailRequest)">
+            <summary>
+            创建单收件人 SaveReceiverDetailWithOptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.CreateTag(AlibabaCloud.SDK.Dm20151123.Models.CreateTagRequest)">
+            <summary>
+            创建标签 CreateTagWithOptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.DeleteTag(AlibabaCloud.SDK.Dm20151123.Models.DeleteTagRequest)">
+            <summary>
+            删除标签 DeleteTagWithOptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.ModifyTag(AlibabaCloud.SDK.Dm20151123.Models.ModifyTagRequest)">
+            <summary>
+            修改标签 ModifyTagWithOptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.QueryTagByParam(AlibabaCloud.SDK.Dm20151123.Models.QueryTagByParamRequest)">
+            <summary>
+            查询标签 QueryTagByParamWithOptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.SendEmail">
+            <summary>
+            推送邮件
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.SendSingleEmail(AlibabaCloud.SDK.Dm20151123.Models.SingleSendMailRequest)">
+            <summary>
+            推送邮件 Single
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.SendBatchEmail(AlibabaCloud.SDK.Dm20151123.Models.BatchSendMailRequest)">
+            <summary>
+            推送邮件 batch
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.SendTestByTemplate(AlibabaCloud.SDK.Dm20151123.Models.SendTestByTemplateRequest)">
+            <summary>
+            根据模板推送邮件 SendTestByTemplate
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.QueryTaskByParam(AlibabaCloud.SDK.Dm20151123.Models.QueryTaskByParamRequest)">
+            <summary>
+            查询邮件队列任务 QueryTaskByParamWithOptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.StatisticsByTagNameAndBatchRequest(AlibabaCloud.SDK.Dm20151123.Models.SenderStatisticsByTagNameAndBatchIDRequest)">
+            <summary>
+            统计 SenderStatisticsByTagNameAndBatchIDWithOptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.SenderStatisticsDetailByParamWithOptions(AlibabaCloud.SDK.Dm20151123.Models.SenderStatisticsDetailByParamRequest)">
+            <summary>
+            统计 SenderStatisticsDetailByParamWithOptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.GetTrackListRequest(AlibabaCloud.SDK.Dm20151123.Models.GetTrackListRequest)">
+            <summary>
+            追踪 GetTrackListRequest
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.AlibabaCloudSdkAppService.GetTrackListByMailFromAndTagNameWithOptions(AlibabaCloud.SDK.Dm20151123.Models.GetTrackListByMailFromAndTagNameRequest)">
+            <summary>
+            追踪 GetTrackListRequest
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Emails.MailAppService">
+            <summary>
+            最原始邮件发送  要用企业邮箱还要在垃圾箱中查看
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.MailAppService.SendAsync(Parakeet.NetCore.Dtos.MailDto)">
+            <summary>
+            Send Mail
+            </summary>
+            <param name="model">包含发件人、收件人、抄送人、主题、附件地址的对象</param>
+        </member>
+        <member name="M:Parakeet.NetCore.Emails.MailAppService.Send">
+            <summary>
+            Default Sent
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.EnumServices.EnumAppService">
+            <summary>
+                枚举类型专用Service
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.EnumServices.EnumAppService.GetAllEnumTypeNames">
+            <summary>
+                返回系统所有枚举类型 类型名称->类型描述/全名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.EnumServices.EnumAppService.GetEnumTypeItemKeyNameDescriptions(Parakeet.NetCore.Dtos.InputNameDto)">
+            <summary>
+                获取 枚举项集合 EnumTypeItemKeyNameDescriptions
+            </summary>
+            <param name="input">枚举类型名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.EnumServices.EnumContext">
+            <summary>
+                构造枚举类型上下文
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.EnumServices.EnumContext.Instance">
+            <summary>
+                静态实例
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.EnumServices.EnumContext.EnumTypeItemKeyNameDescriptions">
+            <summary>
+                枚举项key itemName itemDescription itemKeyString 集合
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.EnumServices.EnumContext.InitEnumTypeMetaData(System.Type)">
+            <summary>
+                初始化枚举类型元数据
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="M:Parakeet.NetCore.EnumServices.EnumContext.LoadEnumTypeContext(System.Type)">
+            <summary>
+                确保枚举所有项已加载
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="M:Parakeet.NetCore.EnumServices.EnumContext.GetAllEnumTypeNames">
+            <summary>
+                返回系统所有枚举类型 类型名称->类型描述/全名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.EnumServices.EnumContext.GeTypeByName(Parakeet.NetCore.Dtos.InputNameDto)">
+            <summary>
+                根据枚举类名获取枚举类型的类型：typeOf(EnumType)
+            </summary>
+            <param name="input">枚举类名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.EnumServices.EnumContext.GeTypeByName(System.String)">
+            <summary>
+                根据枚举类名获取枚举类型的类型：typeOf(EnumType) 
+            </summary>
+            <param name="name">枚举类名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.EnumServices.EnumContext.GetEnumTypeItemKeyNameDescriptions(Parakeet.NetCore.Dtos.InputNameDto)">
+            <summary>
+                获取 枚举项集合 EnumTypeItemKeyNameDescriptions
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.EnumServices.EnumContext.GetEnumTypeItemKeyNameDescriptions(System.String)">
+            <summary>
+                获取 枚举项集合 EnumTypeItemKeyNameDescriptions
+            </summary>
+            <param name="name">枚举类名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.EnumServices.IEnumAppService">
+            <summary>
+                枚举类型专用接口
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.EnumServices.IEnumAppService.GetAllEnumTypeNames">
+            <summary>
+                返回系统所有枚举类型 类型名称->类型描述/全名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.EnumServices.IEnumAppService.GetEnumTypeItemKeyNameDescriptions(Parakeet.NetCore.Dtos.InputNameDto)">
+            <summary>
+                获取 枚举项集合 EnumTypeItemKeyNameDescriptions
+            </summary>
+            <param name="input">枚举类型名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.EsReports.EsReportAppService">
+            <summary>
+            ElasticSearch 报表服务
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.EventHandlers.RemoveCacheEventHandler">
+            <summary>
+            这两个接口的类型，将其自动注册为订阅者 ILocalEventHandler/IDistributedEventHandler
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.EventHandlers.RemoveCacheEventHandler.#ctor(Microsoft.Extensions.Caching.Distributed.IDistributedCache)">
+            <summary>
+            依赖注入分布式缓存容器 IDistributedCache
+            </summary>
+            <param name="cacheManager"></param>
+        </member>
+        <member name="M:Parakeet.NetCore.EventHandlers.RemoveCacheEventHandler.HandleEventAsync(Parakeet.NetCore.Events.RemoveCacheEvent)">
+            <summary>
+            异步方法
+            </summary>
+            <param name="eventData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.EventHandlers.UserEventHandler">
+            <summary>
+            用户消息 ILocalEventHandler/IDistributedEventHandler
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.EventHandlers.UserEventHandler.HandleEventAsync(Parakeet.NetCore.Events.ReadNotifyEvent)">
+            <summary>
+            设置用户未读消息数
+            </summary>
+            <param name="eventData">用户未读消息事件</param>
+            <returns>用户未读消息数</returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Extentions.ServiceExtensions">
+            <summary>
+            服务注册扩展
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Extentions.ServiceExtensions.AddMiddlewareFactory(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            替换注册中间件工厂
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Extentions.ServiceExtensions.AddInheritedMiddleware(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            替换注册中间件工厂
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Extentions.ServiceExtensions.AddBrowserFilter(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            注册服务
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Extentions.ServiceExtensions.AddBrowserFilter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Parakeet.NetCore.Dtos.BrowserFilterOptions})">
+            <summary>
+            直接用Option的模式去初始化
+            </summary>
+            <param name="services"></param>
+            <param name="configure"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Extensions.UseMiddlewareExtention">
+            <summary>
+            use中间件扩展
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Extensions.UseMiddlewareExtention.UseInheritedMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            use IMiddleware示例中间件
+            </summary>
+            <param name="app"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Parakeet.NetCore.Extensions.UseMiddlewareExtention.UseBowenMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            use 未定义接口中间件示例
+            </summary>
+            <param name="app"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Parakeet.NetCore.Extensions.UseMiddlewareExtention.UseSecurePolicy(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            use安全策略中间件
+            </summary>
+            <param name="app"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Parakeet.NetCore.Extensions.UseMiddlewareExtention.UseCustomLog(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            use自定义日志中间件
+            </summary>
+            <param name="app"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Parakeet.NetCore.Extensions.UseMiddlewareExtention.UseBrowserFilter(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            use时不传参
+            </summary>
+            <param name="app"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Extensions.UseMiddlewareExtention.UseBrowserFilter(Microsoft.AspNetCore.Builder.IApplicationBuilder,Parakeet.NetCore.Dtos.BrowserFilterOptions)">
+            <summary>
+            use时传参，中间件构造函数中没传递参数的才会通过IOC初始化，传递了参数的以传递的为准
+            </summary>
+            <param name="app"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Extensions.UseMiddlewareExtention.UseBrowserFilter(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Action{Parakeet.NetCore.Dtos.BrowserFilterOptions})">
+            <summary>
+            optionsAction 这个委托里面的内容会直接影响中间件BrowserFilterMiddleware 构造函数参数注入取值 参数先以use为准
+            </summary>
+            <param name="app"></param>
+            <param name="optionsAction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Extensions.UseMiddlewareExtention.UseStaticPage(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            UseStaticPage
+            </summary>
+            <param name="app"></param>
+            <param name="directoryPath">文件写入地址,文件夹目录</param>
+            <param name="supportDelete">是否支持删除</param>
+            <param name="supportClear">是否支持全量删除</param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Filters.AreaActionFilter">
+            <summary>
+            区域filter
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.Filters.CustomActionFilterAttribute">
+            <summary>
+            Action的Filter  ActionFilterAttribute:框架已经封装了一个全套给我们
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.Filters.CustomAuthorityActionFilterAttribute">
+            <summary>
+            Action上的Filter,Mvc5项目搬移到netcore中的权限权限检测专用
+            netcore扩展的是再action利用管道的方式添加aop动作，而非mvc的aop操作
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.Filters.CustomAuthorizationFilterAttribute">
+            <summary>
+            自定义授权
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Filters.CustomAuthorizationFilterAttribute.OnAuthorizationAsync(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+            发生在请求刚进入MVC流程，还没实例化控制器
+            检测用户登陆--以及是否有权限
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Filters.CustomControllerActionFilterAttribute">
+            <summary>
+            放在controller上 filter
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.Filters.CustomCrossOriginActionFilterAttribute">
+            <summary>
+            Action的Filter  ActionFilterAttribute:框架已经封装了一个全套给我们
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.Filters.CustomExceptionFilterAttribute">
+            <summary>
+            异常处理的filter 
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Filters.CustomExceptionFilterAttribute.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Mvc.ModelBinding.IModelMetadataProvider,Microsoft.Extensions.Logging.ILogger{Parakeet.NetCore.Filters.CustomExceptionFilterAttribute})">
+            <summary>
+            ioc
+            </summary>
+            <param name="hostingEnvironment"></param>
+            <param name="modelMetadataProvider"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Parakeet.NetCore.Filters.CustomExceptionFilterAttribute.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            没有处理的异常，就会进来
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="M:Parakeet.NetCore.Filters.CustomExceptionFilterAttribute.IsAjaxRequest(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            检查是否ajax请求
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Filters.CustomGlobalActionFilterAttribute">
+            <summary>
+            放在全局
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.Filters.CustomIocFilterFactoryAttribute">
+            <summary>
+            自定义属性 实现IFilterFactory 完成filter的依赖注入
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Filters.CustomIocFilterFactoryAttribute.CreateInstance(System.IServiceProvider)">
+            <summary>
+            创建filter实例
+            </summary>
+            <param name="serviceProvider"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Filters.CustomResourceFilterAttribute">
+            <summary>
+            自定义的资源Filter
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Filters.CustomResourceFilterAttribute.CreateInstance(System.IServiceProvider)">
+            <summary>
+            创建filter实例
+            </summary>
+            <param name="serviceProvider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Filters.CustomResourceFilterAttribute.OnResourceExecuting(Microsoft.AspNetCore.Mvc.Filters.ResourceExecutingContext)">
+            <summary>
+            控制器实例化之前
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Parakeet.NetCore.Filters.CustomResourceFilterAttribute.OnResourceExecuted(Microsoft.AspNetCore.Mvc.Filters.ResourceExecutedContext)">
+            <summary>
+            把请求都处理完以后
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Parakeet.NetCore.Filters.CustomResultFilterAttribute">
+            <summary>
+            Result的Filter
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.Houses.HouseAppService">
+            <summary>
+            房间服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Houses.HouseAppService.GetGet(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            获取Get(扩展) 提供给devExtreme masterGrid
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Houses.HouseDtoMapper">
+            <summary>
+            客户需求实体-dto映射
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.Houses.IHouseAppService">
+            <summary>
+            房间服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.LinqExtensions.QueryableExtensions.GetAsync``2(System.Linq.IQueryable{``0},``1)">
+            <summary>
+            从数据源中根据Id单独获取某个实体
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <typeparam name="TKey"></typeparam>
+            <param name="query"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.LinqExtensions.QueryableExtensions.GetProjectToDtoAsync``3(Volo.Abp.Domain.Repositories.IRepository{``0,``1},``1,AutoMapper.IConfigurationProvider)">
+            <summary>
+            AutoMap ProjectTo的源数据类型->目标数据类型dto
+            </summary>
+            <typeparam name="TEntity">源类型</typeparam>
+            <typeparam name="TPrimaryKey">源类型主键</typeparam>
+            <typeparam name="TDestination">目标类型</typeparam>
+            <param name="repository">源</param>
+            <param name="id">主键</param>
+            <param name="configurationProvider">AutoMapper配置</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.LinqExtensions.QueryableExtensions.GetProjectToListDtoAsync``3(Volo.Abp.Domain.Repositories.IRepository{``0,``1},``1,AutoMapper.IConfigurationProvider)">
+            <summary>
+            AutoMap ProjectTo的源数据类型->目标数据类型dto集合
+            </summary>
+            <typeparam name="TEntity">源类型</typeparam>
+            <typeparam name="TPrimaryKey">源类型主键</typeparam>
+            <typeparam name="TDestination">目标类型</typeparam>
+            <param name="repository">源</param>
+            <param name="id">主键</param>
+            <param name="configurationProvider">AutoMapper配置</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.LinqExtensions.QueryableExtensions.WhereDateRange``2(System.Linq.IQueryable{``0},``1)">
+            <summary>
+             时间范围过滤
+            </summary>
+            <typeparam name="TEntity">实体源类型</typeparam>
+            <typeparam name="TDateRangeInput">时间范围过滤项接口</typeparam>
+            <param name="query">实体IQueryable</param>
+            <param name="input">时间范围过滤项</param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.LocationAreas.LocationAreaAppService">
+            <summary>
+                区域服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.LocationAreas.LocationAreaAppService.GetLocationAreas(Parakeet.NetCore.Dtos.LocationAreaInputDto)">
+             <summary>
+                 获取省市区区域列表公共接口 最多带一层子集
+             </summary>
+             <returns></returns>
+            禁用IsMetadataEnabled从而从API Explorer中隐藏此服务, 并且无法被发现. 但是它仍然可以被知道确切API路径/路由的客户端使用
+        </member>
+        <member name="M:Parakeet.NetCore.LocationAreas.LocationAreaAppService.GetPagedResult(Parakeet.NetCore.Dtos.GetLocationAreaListDto)">
+            <summary>
+                获取省市区区域列表(分页)
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.LocationAreas.LocationAreaAppService.GetLocationAreaTree(Parakeet.NetCore.Dtos.InputIdsNullDto)">
+            <summary>
+            获取Get(扩展) 提供给devExtreme
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.LocationAreas.LocationAreaAppService.GetAreaTreeList(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            获取Get(扩展) 提供给devExtreme
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.LocationAreas.LocationAreaAppService.InsertAreaTreeList">
+            <summary>
+            添加实体 提供给devExtreme 前端控件验证实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.LocationAreas.LocationAreaAppService.UpdateAreaTreeList">
+            <summary>
+            UpdateUpdate修改实体 提供给devExtreme,前端控件验证实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.LocationAreas.LocationAreaAppService.DeleteAreaTreeList">
+            <summary>
+            根据主键Id删除实体 DeleteDelete 默认提供给devExtreme
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.LocationAreas.LocationAreaAppService.GetLocationAreaSelectBox(Parakeet.NetCore.Dtos.LocationAreaInputDto)">
+            <summary>
+            提供给devExtreme lookup
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.LocationAreas.LocationAreaAppService.GetParentSelectList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            获取父级节点SelectList列表 故意为post
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.LocationAreas.LocationAreaAppService.GetAllChildrenByParentId(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            根据当前父级Id获取当前父级下的所有子级
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.LocationAreas.LocationAreaAppService.CheckField(Parakeet.NetCore.Dtos.FieldCheckOptionInputDto{System.Guid})">
+            <summary>
+            单字段重复性验证
+            </summary>
+            <param name="input">单个字段选项</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.LocationAreas.LocationAreaAppService.CheckFields(Parakeet.NetCore.Dtos.FieldsCheckOptionInputDto{System.Guid})">
+            <summary>
+            多字段重复性验证，dxGrid在新建/编辑数据时 时时验证
+            </summary>
+            <param name="input">多字段dto选项</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.LocationAreas.LocationAreaAppService.AddLevelAreasInOrder(Parakeet.NetCore.Enums.DeepLevelType)">
+            <summary>
+            添加同(Level)区域数据(读取Json数据) 从小到大添加
+            </summary>
+            <param name="level">0-5</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.LocationAreas.LocationAreaAppService.ImportFromExcel(Parakeet.NetCore.Dtos.ImportFileDto)">
+            <summary>
+            数据初始化：导入excel数据文件 读取数据数据库
+            </summary>
+            <param name="input">多文件上传对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.LocationAreas.LocationAreaDtoMapper">
+            <summary>
+                区域DtoMapper
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.LocationAreas.LocationAreaExceler">
+            <summary>
+            导入区域数据服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.LocationAreas.LocationAreaExceler.ExcelDataRowToEntities(System.Int32,NPOI.SS.UserModel.IRow)">
+            <summary>
+            1行对应1个实体
+            </summary>
+            <param name="columnIndex"></param>
+            <param name="dataRow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.LocationAreas.LocationAreaExceler.Validate(NPOI.SS.UserModel.IRow)">
+            <summary>
+            验证Excel规则 自定义
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.LocationAreas.LocationAreaExceler.Export(System.Linq.IQueryable{Parakeet.NetCore.Entities.LocationArea})">
+            <summary>
+            数据源导出为文件流
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Locks.DefaultLock">
+            <summary>
+            默认业务锁
+            </summary>
+        </member>
+        <member name="F:Parakeet.NetCore.Locks.DefaultLock._key">
+            <summary>
+            锁定标识 唯一
+            </summary>
+        </member>
+        <member name="F:Parakeet.NetCore.Locks.DefaultLock._distributedCache">
+            <summary>
+            redis分布式缓存
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.Locks.DefaultLock.EventBus">
+            <summary>
+            事件
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Locks.DefaultLock.#ctor(Microsoft.Extensions.Caching.Distributed.IDistributedCache)">
+            <summary>
+            初始化业务锁
+            </summary>
+            <param name="distributedCache">缓存</param>
+        </member>
+        <member name="M:Parakeet.NetCore.Locks.DefaultLock.LockAsync(System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            锁定，成功锁定返回true，false代表之前已被锁定
+            </summary>
+            <param name="key">锁定标识</param>
+            <param name="expiration">锁定时间间隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Locks.DefaultLock.UnLockAsync">
+            <summary>
+            解除锁定
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Locks.DefaultLock.Lock(System.String,System.Nullable{System.TimeSpan})">
+            <summary>   
+            锁定，成功锁定返回true，false代表之前已被锁定
+            </summary>
+            <param name="key">锁定标识</param>
+            <param name="expiration">锁定时间间隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Locks.DefaultLock.UnLock">
+            <summary>
+            解除锁定
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Locks.LockExtensions.AddLock(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            注册业务锁
+            </summary>
+            <param name="service">服务集合</param>
+        </member>
+        <member name="T:Parakeet.NetCore.Locks.NullLock">
+            <summary>
+            空业务锁
+            </summary>
+        </member>
+        <member name="F:Parakeet.NetCore.Locks.NullLock.Instance">
+            <summary>
+            空业务锁
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Locks.NullLock.Lock(System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            锁定，成功锁定返回true，false代表之前已被锁定
+            </summary>
+            <param name="key">锁定标识</param>
+            <param name="expiration">锁定时间间隔</param>
+        </member>
+        <member name="M:Parakeet.NetCore.Locks.NullLock.UnLock">
+            <summary>
+            解除锁定
+            </summary>
+        </member>
+        <member name="F:Parakeet.NetCore.Locks.UserLock.UserLockKey">
+            <summary>
+            唯一标识key
+            </summary>
+        </member>
+        <member name="F:Parakeet.NetCore.Locks.UserLock.Lock">
+            <summary>
+            业务锁
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.Locks.UserLock.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.Locks.UserLock.Action">
+            <summary>
+            锁定的方法
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.Locks.UserLock.IsLocked">
+            <summary>
+            是否被锁定
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.Locks.UserLock.Expiration">
+            <summary>
+            自动解锁时间，默认为1分钟
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Locks.UserLock.#ctor(Parakeet.NetCore.Locks.ILock,System.Nullable{System.Guid},System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            用户业务锁
+            </summary>
+            <param name="lock">业务锁</param>
+            <param name="userId">用户Id</param>
+            <param name="action">锁定的操作</param>
+            <param name="expiration">自动解锁时间，默认为1分钟</param>
+        </member>
+        <member name="T:Parakeet.NetCore.Middleware.BowenMiddleware">
+            <summary>
+            app.UseMiddleware
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Middleware.BowenMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,System.String)">
+            <summary>
+            一定有个构造函数，传递RequestDelegate  源码做了检查的
+            </summary>
+            <param name="next"></param>
+        </member>
+        <member name="M:Parakeet.NetCore.Middleware.BowenMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext,Microsoft.Extensions.Logging.ILogger{Parakeet.NetCore.Middleware.BowenMiddleware})">
+            <summary>
+            参数：构造函数可以有参数,且参数个数无限制，但第一个参数有类型限制，参数一般通过use中间件时传入，
+                    如果use中间件时没有传入，build()时会去构造中间件，这时就会从IOC容器中去获取
+            约束：方法名称必须是Invoke 或者InvokeAsync  并且返回类型必须是Task  并且第一个参数为HttpContext类型
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Middleware.BrowserFilterMiddleware">
+            <summary>
+            浏览器检查中间件
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Middleware.BrowserFilterMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Parakeet.NetCore.Middleware.BrowserFilterMiddleware},Parakeet.NetCore.Options.IBrowserCheck,Microsoft.Extensions.Options.IConfigureOptions{Parakeet.NetCore.Dtos.BrowserFilterOptions},Microsoft.Extensions.Options.IOptionsMonitor{Parakeet.NetCore.Dtos.BrowserFilterOptions},Microsoft.Extensions.Options.IOptions{Parakeet.NetCore.Dtos.BrowserFilterOptions})">
+            <summary>
+            玩法3一起生效---先Use为准，再叠加Add的委托
+            这不是框架的推荐写法，仅用于技术研究和融合应用，需仔细验证
+            </summary>
+            <param name="next"></param>
+            <param name="logger"></param>
+            <param name="browserCheck"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:Parakeet.NetCore.Middleware.BrowserFilterMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            方法名字Invoke或者InvokeAsync
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Middleware.CustomLogMiddleware">
+            <summary>
+            app.UseMiddleware 自定义输出日志信息中间件
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.Middleware.InheritedMiddleware">
+            <summary>
+            1  实现IMiddleware，就不能有参数--而且还得IOC注册
+            2  IMiddleware的实现类型的初始化是请求来了之后才发生
+            3  如果响应请求时，才实例化，用完立即释放---这种就应该实现IMiddleware
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.Middleware.ParakeetMiddlewareFactory">
+            <summary>
+            中间件工厂 用于构造IMiddleware接口的中间件
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Middleware.ParakeetMiddlewareFactory.Create(System.Type)">
+            <summary>
+            创建中间件
+            </summary>
+            <param name="middlewareType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Middleware.ParakeetMiddlewareFactory.Release(Microsoft.AspNetCore.Http.IMiddleware)">
+            <summary>
+            释放中间件  需要中间件继承IDisposable接口
+            </summary>
+            <param name="middleware"></param>
+        </member>
+        <member name="T:Parakeet.NetCore.Middleware.SecurePolicyMiddleware">
+            <summary>
+            自定义安全策略中间件
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Middleware.SecurePolicyMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            委托逻辑
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Middleware.SecurePolicyMiddleware.GetUser(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            从context中获取user
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Middleware.SecurePolicyMiddleware.GetRequestIP(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            获取客户端请求Ip
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Middleware.StaticPageMiddleware">
+            <summary>
+            支持在返回HTML时，将返回的Stream保存到指定目录
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Middleware.StaticPageMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            任意HTTP请求，都要经过这个方法
+            抓到响应，并保存成HTML静态页
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Middleware.StaticPageMiddleware.DeleteHmtl(System.String)">
+            <summary>
+            删除某个页面
+            </summary>
+            <param name="url"></param>
+        </member>
+        <member name="M:Parakeet.NetCore.Middleware.StaticPageMiddleware.ClearDirectory(System.Int32)">
+            <summary>
+            清理文件，支持重试
+            </summary>
+            <param name="index">最多重试次数</param>
+        </member>
+        <member name="M:Parakeet.NetCore.Middleware.StreamWriteMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            http://localhost:5726/Home/Info?name=Eleven
+            请求的值改不了，除非用postman请求，body里面传值才行
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Needs.INeedAppService">
+            <summary>
+            需求 这个接口父类都直接依赖了实体层 故此类接口不能写在Contracts层共享了
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Needs.INeedAppService.GetPagedResult(Parakeet.NetCore.Dtos.NeedPagedInputDto)">
+            <summary>
+             获取列表数据(分页)
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Needs.INeedAppService.UploadFiles(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            UploadFile Request.Form.Files接收文件 Request.Form["uploadGuid"]传递uploadGuid
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Needs.INeedAppService.GetAttachmentName(Parakeet.NetCore.Entities.NeedAttachment)">
+            <summary>
+            获取附件名
+            </summary>
+            <param name="attachment">附件实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Needs.INeedAppService.DeleteAttachments(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            根据主键PrimaryKey删除实体 DeleteDelete 默认提供给devExtreme
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Needs.INeedAppService.Create(Parakeet.NetCore.Dtos.NeedCreateDto)">
+            <summary>
+            POST: Need/Create
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Needs.INeedAttachmentAppService">
+            <summary>
+            需求附件
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Needs.INeedAttachmentAppService.GetNeedAttachments(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            需求附件
+            </summary>
+            <param name="input">id:needId需求Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Needs.NeedAppService">
+            <summary>
+            需求服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Needs.NeedAppService.GetGet(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            获取Get(扩展) 提供给devExtreme
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Needs.NeedAppService.GridData(Parakeet.NetCore.Dtos.LoadOptionInputDto)">
+            <summary>
+            获取GridData(Post扩展)  提供给devExtreme
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Needs.NeedAppService.GetPagedResult(Parakeet.NetCore.Dtos.NeedPagedInputDto)">
+            <summary>
+             获取列表数据(分页)
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Needs.NeedAppService.DeleteDelete">
+            <summary>
+            根据主键PrimaryKey删除实体 DeleteDelete 默认提供给devExtreme
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Needs.NeedAppService.DeleteAttachments(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            根据主键PrimaryKey删除实体 DeleteDelete 默认提供给devExtreme
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Needs.NeedAppService.UploadFiles(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            UploadFile Request.Form.Files接收文件 Request.Form["uploadGuid"]传递uploadGuid
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Needs.NeedAppService.GetAttachmentName(Parakeet.NetCore.Entities.NeedAttachment)">
+            <summary>
+            获取附件名称
+            </summary>
+            <param name="attachment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Needs.NeedAppService.Create(Parakeet.NetCore.Dtos.NeedCreateDto)">
+            <summary>
+            POST: Need/Create
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Needs.NeedAppService.GetMailBody(Parakeet.NetCore.Entities.Need,System.Boolean)">
+            <summary>
+            body里面可以构造html
+            </summary>
+            <param name="need"></param>
+            <param name="sendToCustomer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Needs.NeedAppService.GetMailDto(System.Guid)">
+            <summary>
+            获取通用邮件传输对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Needs.NeedAttachmentAppService">
+            <summary>
+            需求附件服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Needs.NeedAttachmentAppService.GetNeedAttachments(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            获取所有附件信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Needs.NeedDtoMapper">
+            <summary>
+            客户需求实体-dto映射
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.NetCoreApplicationAutoMapperProfile">
+            <summary>
+            所有继承自Profile的类的构造函数都会被abp框架自动执行
+            可以在这里面写entity->dto映射关系
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.Options.BrowserCheckService">
+            <summary>
+            浏览器检查服务
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.Organizations.IOrganizationAppService">
+            <summary>
+            IOrganizationService 服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.IOrganizationAppService.GetPagedResult(Parakeet.NetCore.Dtos.PagedInputDto)">
+            <summary>
+             获取列表数据(分页)
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.IOrganizationAppService.GetLeafNodeIds">
+            <summary>
+            获取所有叶子节点Id
+            </summary>
+            <returns>获取所有叶子节点Id</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.IOrganizationAppService.GetParentNodeIds">
+            <summary>
+            获取所有父级节点Id
+            </summary>
+            <returns>获取所有父级节点Id</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.IOrganizationAppService.GetRootNodeIds">
+            <summary>
+            获取所有根节点Ids
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.IOrganizationAppService.GetRootAndParentNodeIds">
+            <summary>
+            获取所有根节点与已经为父级的节点Ids
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.IOrganizationAppService.GetParentSelectList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            获取所有父级SelectBoxsGetParentSelectList
+            </summary>
+            <param name="id"></param>
+            <returns>SelectBoxs</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.IOrganizationAppService.GetRootItemTree(Parakeet.NetCore.Dtos.InputIdsDto)">
+            <summary>
+            根级节点treeView数据源
+            </summary>
+            <param name="input">ids:selectedIds</param>
+            <returns>TreeDtos</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.IOrganizationAppService.GetRootTrees(Parakeet.NetCore.Dtos.InputIdsDto)">
+            <summary>
+            所有节点treeView数据源
+            </summary>
+            <param name="input">ids:selectedIds</param>
+            <returns>TreeDto</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.IOrganizationAppService.GetRootByNodeId(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            根据当前节点Id寻找根级目录Id
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.IOrganizationAppService.GetChildrenByParents(Parakeet.NetCore.Dtos.InputIdsDto)">
+            <summary>
+            获取某组织机构下的子级机构
+            </summary>
+            <param name="input">ids:parentIds父级Ids集合</param>
+            <returns>某组织机构下的子级机构</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.IOrganizationAppService.GetChildrenByParent(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            获取某组织机构的所有子级
+            </summary>
+            <param name="input">Id:parentId</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.IOrganizationAppService.GetAllChildrenByParentId(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            获取某组织下所有子级机构
+            </summary>
+            <param name="input">Id:organizationId</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.IOrganizationAppService.GetAllChildrenByParentIds(Parakeet.NetCore.Dtos.InputIdsDto)">
+            <summary>
+            获取某组织集合 下所有子级机构
+            </summary>
+            <param name="input">ids：parentIds某组织集合</param>
+            <returns>子级机构集合</returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Organizations.OrganizationAppService">
+            <summary>
+            组织机构服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.OrganizationAppService.GetGet(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            获取Get(扩展) 提供给devExtreme
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.OrganizationAppService.GridData(Parakeet.NetCore.Dtos.LoadOptionInputDto)">
+            <summary>
+            默认Post获取GridData(可扩展)  提供给devExtreme
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.OrganizationAppService.GetPagedResult(Parakeet.NetCore.Dtos.PagedInputDto)">
+            <summary>
+             获取列表数据(分页)
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.OrganizationAppService.InsertInsert">
+            <summary>
+            添加实体 提供给devExtreme 前端控件验证实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.OrganizationAppService.UpdateUpdate">
+            <summary>
+            UpdateUpdate修改实体 提供给devExtreme,前端控件验证实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.OrganizationAppService.DeleteDelete">
+            <summary>
+            根据主键Id删除实体 DeleteDelete 默认提供给devExtreme
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.OrganizationAppService.GetLeafNodeIds">
+            <summary>
+            获取所有叶子节点Id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.OrganizationAppService.GetParentNodeIds">
+            <summary>
+            获取所有已经为父级的节点Ids
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.OrganizationAppService.GetRootNodeIds">
+            <summary>
+            获取所有根节点Ids
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.OrganizationAppService.GetRootAndParentNodeIds">
+            <summary>
+            获取所有根节点与已经为父级的节点Ids
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.OrganizationAppService.GetParentSelectList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            获取父级节点SelectList列表 故意为post
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.OrganizationAppService.GetRootItemTree(Parakeet.NetCore.Dtos.InputIdsDto)">
+            <summary>
+            仅根级节点列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.OrganizationAppService.GetRootTrees(Parakeet.NetCore.Dtos.InputIdsDto)">
+            <summary>
+            所有根节点下,选中Ids的TreeView数据源方法
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.OrganizationAppService.GetRootByNodeId(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            根据当前节点Id寻找根级目录Id
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.OrganizationAppService.GetChildrenByParents(Parakeet.NetCore.Dtos.InputIdsDto)">
+            <summary>
+            根据父级Ids集合获取子级实体Dto集合
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.OrganizationAppService.GetChildrenByParent(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            根据当前父级Id获取当前父级下的所有子级
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.OrganizationAppService.GetAllChildrenByParentId(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            根据当前父级Id获取当前父级下的所有子级
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.OrganizationAppService.GetAllChildrenByParentIds(Parakeet.NetCore.Dtos.InputIdsDto)">
+            <summary>
+            根据当前节点Ids获取所有子级
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Organizations.OrganizationAppService.TransactionScopeReadAndWriteTest">
+            <summary>
+            读写分离的sql测试 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.PersonalCaches.IPersonalCacheAppService">
+            <summary>
+            个性化缓存
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.PersonalCaches.IPersonalCacheAppService.SetCacheCode(System.String)">
+            <summary>
+            设置缓存验证码5分钟,每次都重新设置验证码
+            </summary>
+            <param name="code">需要缓存的验证码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.PersonalCaches.IPersonalCacheAppService.GetCacheCode">
+            <summary>
+            获取缓存验证码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.PersonalCaches.IPersonalCacheAppService.ClearCache(Parakeet.NetCore.Dtos.InputNameDto)">
+            <summary>
+            清空指定key的缓存
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.PersonalCaches.PersonalCacheAppService">
+            <summary>
+            个性化缓存 统一几种管理
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.PersonalCaches.PersonalCacheAppService.GetValidCodeImage">
+            <summary>
+            Get获取验证码图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.PersonalCaches.PersonalCacheAppService.GetValidCodeBase64String">
+            <summary>
+            Get获取验证码图片Base64String
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.PersonalCaches.PersonalCacheAppService.SetCacheCode(System.String)">
+            <summary>
+            设置缓存验证码5分钟,每次都重新设置验证码
+            </summary>
+            <param name="code">需要缓存的验证码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.PersonalCaches.PersonalCacheAppService.GetCacheCode">
+            <summary>
+            获取缓存验证码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.PersonalCaches.PersonalCacheAppService.ClearCache(Parakeet.NetCore.Dtos.InputNameDto)">
+            <summary>
+            清空指定key的缓存
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.PersonalCaches.PersonalCacheAppService.FileContentResult(System.Byte[],System.String,System.String)">
+            <summary>
+            Returns a file with the specified <paramref name="fileContents" /> as content (<see cref="F:Microsoft.AspNetCore.Http.StatusCodes.Status200OK" />), the
+            specified <paramref name="contentType" /> as the Content-Type and the specified <paramref name="fileDownloadName" /> as the suggested file name.
+            This supports range requests (<see cref="F:Microsoft.AspNetCore.Http.StatusCodes.Status206PartialContent" /> or
+            <see cref="F:Microsoft.AspNetCore.Http.StatusCodes.Status416RangeNotSatisfiable" /> if the range is not satisfiable).
+            </summary>
+            <param name="fileContents">The file contents.</param>
+            <param name="contentType">The Content-Type of the file.</param>
+            <param name="fileDownloadName">The suggested file name.</param>
+            <returns>The created <see cref="T:Microsoft.AspNetCore.Mvc.FileContentResult" /> for the response.</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.PersonalCaches.PersonalCacheAppService.PhysicalFile(System.String,System.String,System.String)">
+            <summary>
+            Returns the file specified by <paramref name="physicalPath" /> (<see cref="F:Microsoft.AspNetCore.Http.StatusCodes.Status200OK" />) with the
+            specified <paramref name="contentType" /> as the Content-Type and the
+            specified <paramref name="fileDownloadName" /> as the suggested file name.
+            This supports range requests (<see cref="F:Microsoft.AspNetCore.Http.StatusCodes.Status206PartialContent" /> or
+            <see cref="F:Microsoft.AspNetCore.Http.StatusCodes.Status416RangeNotSatisfiable" /> if the range is not satisfiable).
+            </summary>
+            <param name="physicalPath">The path to the file. The path must be an absolute path.</param>
+            <param name="contentType">The Content-Type of the file.</param>
+            <param name="fileDownloadName">The suggested file name.</param>
+            <returns>The created <see cref="T:Microsoft.AspNetCore.Mvc.PhysicalFileResult" /> for the response.</returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Products.IProductAppService">
+            <summary>
+            产品服务
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.Products.ProductAppService">
+            <summary>
+            产品服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Products.ProductAppService.GetGet(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            获取Get(扩展) 提供给devExtreme masterGrid
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Products.ProductAppService.PivotGrid(Parakeet.NetCore.Dtos.ProductPivotGridInputDto)">
+            <summary>
+            获取所有产品数据源 默认只查看半个月内的数据
+            </summary> 
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Products.ProductDtoMapper">
+            <summary>
+            客户需求实体-dto映射
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.Projects.IProjectAppService">
+            <summary>
+            项目服务 IProjectAppService
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Projects.IProjectAppService.GetPagedResult(Parakeet.NetCore.Dtos.GetProjectsInputDto)">
+            <summary>
+             获取列表数据(分页)
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Projects.IProjectAppService.GetProjectFilterList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+             获取所有项目列表数据
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Projects.IProjectAppService.GetProjectSelectList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            获取项目下拉列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Projects.IProjectAppService.UploadFile(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            UploadFile Request.Form.Files接收文件 Request.Form["uploadGuid"]传递uploadGuid
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Projects.IProjectAppService.GetProjectAttachments(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            获取项目全部附件列表 不分页
+            </summary>
+            <param name="input">项目Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Projects.ProjectAppService">
+            <summary>
+            项目服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Projects.ProjectAppService.GetGet(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            获取Get(扩展) 提供给devExtreme
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Projects.ProjectAppService.GridData(Parakeet.NetCore.Dtos.LoadOptionInputDto)">
+            <summary>
+            获取GridData(Post扩展)  提供给devExtreme
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Projects.ProjectAppService.GetPagedResult(Parakeet.NetCore.Dtos.GetProjectsInputDto)">
+            <summary>
+             获取列表数据(分页)
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Projects.ProjectAppService.GetProjectFilterList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+             获取所有项目列表数据
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Projects.ProjectAppService.GetProjectSelectList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            获取项目下拉列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Projects.ProjectAppService.DeleteDelete">
+            <summary>
+            根据主键PrimaryKey删除实体 DeleteDelete 默认提供给devExtreme
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Projects.ProjectAppService.UploadFile(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            UploadFile Request.Form.Files接收文件 Request.Form["uploadGuid"]传递uploadGuid
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Projects.ProjectAppService.GetProjectAttachments(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            获取项目全部附件列表 不分页
+            </summary>
+            <param name="input">项目Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Sections.ISectionAppService">
+            <summary>
+            小区区域服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Sections.ISectionAppService.GetSectionSelectList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            获取地块下拉列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Sections.SectionAppService">
+            <summary>
+            小区/地块区域服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Sections.SectionAppService.GetGet(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            获取Get(扩展) 提供给devExtreme
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Sections.SectionAppService.GetSectionSelectList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            获取地块下拉列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Sections.SectionDtoMapper">
+            <summary>
+            客户需求实体-dto映射
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.SectionWorkerDetails.ISectionWorkerDetailAppService">
+            <summary>
+            区域工人工作明细
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.SectionWorkerDetails.SectionWorkerDetailAppService">
+            <summary>
+            区域工人用工明细服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.SectionWorkerDetails.SectionWorkerDetailAppService.GetGet(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            获取Get(扩展) 提供给devExtreme masterGrid
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.SectionWorkerDetails.SectionWorkerDetailAppService.PivotGrid(Parakeet.NetCore.Dtos.SectionWorkerDetailPivotGridInputDto)">
+            <summary>
+            获取所有区域工人数据源
+            </summary> 
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.SectionWorkers.SectionWorkerDetailDtoMapper">
+            <summary>
+            客户需求实体-dto映射
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.SectionWorkers.ISectionWorkerAppService">
+            <summary>
+            区域工人服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.SectionWorkers.ISectionWorkerAppService.GetSectionWorkerSelectList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            获取地块工人下拉列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.SectionWorkers.SectionWorkerAppService">
+            <summary>
+            区域工人服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.SectionWorkers.SectionWorkerAppService.GetGet(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            获取Get(扩展) 提供给devExtreme masterGrid
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.SectionWorkers.SectionWorkerAppService.PivotGrid(Parakeet.NetCore.Dtos.SectionWorkerPivotGridInputDto)">
+            <summary>
+            获取所有区域工人数据源 默认只查看半个月内的数据
+            </summary> 
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.SectionWorkers.SectionWorkerAppService.GetSectionWorkerSelectList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            获取地块工人下拉列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.SectionWorkers.SectionWorkerDtoMapper">
+            <summary>
+            客户需求实体-dto映射
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.SecurePolicies.ISecurePolicyAppService">
+            <summary>
+            安全策略服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.SecurePolicies.ISecurePolicyAppService.GetCurrentUserPolicies(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            获取当前登录用户所有启用的安全策略
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.SecurePolicies.SecurePolicyAppService">
+            <summary>
+            安全策略服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.SecurePolicies.SecurePolicyAppService.GetGet(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            获取Get(扩展) 提供给devExtreme
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.SecurePolicies.SecurePolicyAppService.GetCurrentUserPolicies(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            获取当前登录用户所有启用的安全策略
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.SeedData.CustomerDataSeed">
+            <summary>
+                初始化数据 放到application模块即可,继承自IDataSeedContributor接口的类，再主项目配置每次启动都执行
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.ServiceGroup.AlibabaSdk.AlibabaSdkOption">
+            <summary>
+            阿里巴巴Sdk配置项
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.AlibabaSdk.AlibabaSdkOption.AppKey">
+            <summary>
+            公钥
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.AlibabaSdk.AlibabaSdkOption.AppSecret">
+            <summary>
+            私钥
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.AlibabaSdk.AlibabaSdkOption.ServerUrl">
+            <summary>
+            网站服务端地址
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.ServiceGroup.DefaultServiceTokenAttribute">
+            <summary>
+                默认token注入过滤器：微服务与微服务系统级接口调用将请求头中的Authorization(Token)注入过滤器
+            </summary>
+        </member>
+        <member name="F:Parakeet.NetCore.ServiceGroup.DefaultServiceTokenAttribute._asyncRoot">
+            <summary>异步锁</summary>
+        </member>
+        <member name="F:Parakeet.NetCore.ServiceGroup.DefaultServiceTokenAttribute._token">
+            <summary>最近请求到的token</summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.DefaultServiceTokenAttribute.OrderIndex">
+            <summary>获取或设置过滤器的执行排序索引</summary>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.DefaultServiceTokenAttribute.OnBeginRequestAsync(WebApiClient.Contexts.ApiActionContext)">
+            <summary>
+            重写父类ApiActionFilterAttribute 准备请求前逻辑
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.DefaultServiceTokenAttribute.OnEndRequestAsync(WebApiClient.Contexts.ApiActionContext)">
+            <summary>
+            重写父类ApiActionFilterAttribute 请求完成之后逻辑
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.DefaultServiceTokenAttribute.InitOrRefreshTokenAsync">
+            <summary>
+            初始化或刷新token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.DefaultServiceTokenAttribute.AccessTokenResult(WebApiClient.Contexts.ApiActionContext,WebApiClient.AuthTokens.TokenResult)">
+            <summary>
+                应用AccessToken
+                默认为添加到请求头的Authorization
+            </summary>
+            <param name="context">请求上下文</param>
+            <param name="tokenResult">token结果</param>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.DefaultServiceTokenAttribute.RequestTokenResultAsync">
+            <summary>
+                请求获取token
+                可以使用TokenClient来请求
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.DefaultServiceTokenAttribute.RequestRefreshTokenAsync(System.String)">
+            <summary>
+                请求刷新token
+                可以使用TokenClient来刷新
+            </summary>
+            <param name="refreshToken">获取token时返回的refresh_token</param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.ServiceGroup.Esign.ESignAppKeyAttribute">
+            <summary>
+            e签宝的AppKey
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.ServiceGroup.Esign.ESignOption">
+            <summary>
+            E签账号密钥
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.ServiceGroup.Esign.HttpApis.IAccountApi">
+            <summary>
+            注册个人和组织账号
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.Esign.HttpApis.IAccountApi.AddPerson(Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.PersonBeanDto)">
+            <summary>
+            个人账号注册
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.Esign.HttpApis.IAccountApi.AddOrganize(Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.OrganizeBeanDto)">
+            <summary>
+            组织账号注册
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.ServiceGroup.Esign.HttpApis.ICertifycateApi">
+            <summary>
+            个人和组织实名认证接口
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.Esign.HttpApis.ICertifycateApi.RealNameValidate(Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.ESignRealNameValidateDto)">
+            <summary>
+            实名认证三要素接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.Esign.HttpApis.ICertifycateApi.RealNameOrganizationValidate(Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.ESignOrganizationValidateDto)">
+            <summary>
+            企业认证三要素 企业名称 企业统一信用代码 法人
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.Esign.HttpApis.ICertifycateApi.RealNameOrganizationSimpleValidate(Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.ESignOrganizationValidateDto)">
+            <summary>
+            企业认证二要素 企业统一信用代码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.ServiceGroup.Esign.HttpApis.IESealApi">
+            <summary>
+            E签注册个人/组织 印章
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.Esign.HttpApis.IESealApi.AddPersonSeal(Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.AddPersonSealInput)">
+            <summary>
+            创建用户个性签章
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.Esign.HttpApis.IESealApi.AddOrganizeSeal(Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.OrganizeSealInput)">
+            <summary>
+            创建企业签章
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.ServiceGroup.Esign.HttpApis.IESignApi">
+            <summary>
+            代理E签签章接口
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.AddPersonSealInput.Color">
+            <summary>
+            生成印章的颜色，RED（红色）、BLACK（黑色）、BLUE（蓝色）
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.AddPersonSealInput.TemplateType">
+            <summary>
+            模板类型，SQUARE（正方形），RECTANGLE（长方形），FZKC（艺术字体），YYGXSF（艺术字体），HYLSF（艺术字体），BORDERLESS（无框矩形），HWLS（华文隶书），HWXK（华文行楷），HWXKBORDER（带框华文行楷），YGYJFCS（叶根友疾风草书），YGYMBXS（叶根友行书）
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.ESignOrganizationValidateDto.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.ESignOrganizationValidateDto.CodeOrg">
+            <summary>
+            企业组织机构代码
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.ESignOrganizationValidateDto.CodeUsc">
+            <summary>
+            企业统一信用代码
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.ESignOrganizationValidateDto.CodeReg">
+            <summary>
+            企业工商注册号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.ESignOrganizationValidateDto.LegalName">
+            <summary>
+            企业法人姓名
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.ESignRealNameValidateDto.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.ESignRealNameValidateDto.IdNo">
+            <summary>
+            身份证编号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.ESignRealNameValidateDto.Mobile">
+            <summary>
+            银行卡预留手机号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.OrganizeSealInput.HText">
+            <summary>
+            生成印章中的横向文内容
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.OrganizeSealInput.QText">
+            <summary>
+            生成印章中的下弦文内容
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.ServiceGroup.Esign.HttpDtos.ProjectConfigDto">
+            <summary>
+            E签配置类
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Files.HttpModels.AddFileInfoInput.IsPublic">
+            <summary>
+                此文件是否是公开的，当为true时未认证用户也能访问该文件
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Files.HttpModels.AddFileInfoInput.IsPrivate">
+            <summary>
+                此文件是否私有，当为true只能上传者自己才能访问该文件,如果IsPublic为false,IsPrivate为false,那么只要是认证用户都可以访问此文件
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Files.HttpModels.AddFileInfoInput.ExpiryPublicTime">
+            <summary>
+                当IsPublic为true时，可以设置公开的截至时间，时间到期后只能上传的用户访问该文件
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Files.HttpModels.FileInfoDto.IsPublic">
+            <summary>
+                此文件是否是公开的，当为true时未认证用户也能访问该文件
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Files.HttpModels.FileInfoDto.IsPrivate">
+            <summary>
+                此文件是否私有，当为true只能上传者自己才能访问该文件,如果IsPublic为false,IsPrivate为false,那么只要是认证用户都可以访问此文件
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Files.HttpModels.FileInfoDto.ExpiryPublicTime">
+            <summary>
+                当IsPublic为true时，可以设置公开的截至时间，时间到期后只能上传的用户访问该文件
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.ServiceGroup.JianWei.ChongqingJianWeiAppKeyAttribute">
+            <summary>
+            ChongqingJianWei的AppKey
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.ServiceGroup.JianWei.ChongqingJianWeiOption">
+             <summary>
+            JianWei账号密钥
+             </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.ChongqingJianWeiOption.SupplierKeyId">
+            <summary>
+            供应商授权id，全局唯一
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.ChongqingJianWeiOption.SupplierKeySecret">
+            <summary>
+            供应商密钥值，用于请求签名，不在请求中传输，需要妥善保管
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.ChongqingJianWeiOption.ProjectKeyId">
+            <summary>
+            项目授权id，全局唯一
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.ChongqingJianWeiOption.ProjectKeySecret">
+            <summary>
+            项目密钥的值，用于请求签名，不在请求中传输，需要妥善保管
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.ChongqingJianWeiOption.FakeNo">
+            <summary>
+            同步数据用的设备编码FakeNo
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.ServiceGroup.JianWei.HttpApis.IChongqingJianWeiApi">
+            <summary>
+            重庆建委V1.0 Api
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.JianWei.HttpApis.IChongqingJianWeiApi.GetProjectWorker(System.Int32)">
+            <summary>
+            人员信息下载接口
+            </summary>
+            <param name="page">请求页面，首次请求可以不传，page从0开始计算，首页page=0,第二页page=1,依次类推</param>
+            <returns></returns>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.JianWeiResult`1.Code">
+            <summary>
+            状态代码0	执行成功1	参数格式错误2	数据错误3	未授权4	系统异常
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.JianWeiResult`1.Message">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.JianWeiResult`1.Content">
+            <summary>
+            返回结果记录列表，数组格式
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.JianWeiResult`1.Page">
+            <summary>
+            分页信息
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.Page.Size">
+            <summary>
+            每页记录数
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.Page.TotalPages">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.Page.Number">
+            <summary>
+            当前页，首页number=0,第二页number=1,依次类推
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.AreaId">
+            <summary>
+            区域ID
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.RootId">
+            <summary>
+            省级ID
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.ProjectId">
+            <summary>
+            项目ID
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.WorkerId">
+            <summary>
+            人员ID
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.WorkerName">
+            <summary>
+            人员名称
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.WorkerIdNo">
+            <summary>
+            身份证(掩码显示)
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.WorkerIdNoCoded">
+            <summary>
+            身份证sha1加密
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.WorkerGender">
+            <summary>
+            性别：MALEL：男FEMALE：女
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.WorkerHeaderImage">
+            <summary>
+            头像图片URL
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.WorkerNation">
+            <summary>
+            民族
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.Corp">
+            <summary>
+            所属企业
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.WorkerType">
+            <summary>
+            工种
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.WorkerCategory">
+            <summary>
+            人员类别：M：管理人员W：作业工人
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.EntryStatus">
+            <summary>
+            人员状态：Entry：在职Exit：离职Locked：禁入
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.JoinDate">
+            <summary>
+            入职时间
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.LeaveDate">
+            <summary>
+            离职时间
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.Mode">
+            <summary>
+            考勤方式：
+            Face：人脸识别
+            Eye：虹膜识别
+            Finger：指纹识别
+            Hand：掌纹识别
+            IDCard：身份证识别
+            RnCard：实名卡
+            Error：异常清退
+            Manuel：一键开闸
+            ExitChannel：应急通道
+            QRCode：二维码识别
+            App：APP考勤
+            Other：其他方式
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.AttendanceCard">
+            <summary>
+            考勤卡
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.LaborCompany">
+            <summary>
+            劳务公司
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.UpdatedAt">
+            <summary>
+            最后更新时间
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.ProjectWorkerDto.GroupLeader">
+            <summary>
+            是否班组长
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.Corp.Id">
+            <summary>
+            班组ID
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.Corp.Code">
+            <summary>
+            班组编码
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.Corp.Name">
+            <summary>
+            班组名称
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.WorkerType.Id">
+            <summary>
+            工种ID
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.WorkerType.Code">
+            <summary>
+            工种编码
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.WorkerType.Name">
+            <summary>
+            工种名称
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.WorkPost.Id">
+            <summary>
+            岗位ID
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.WorkPost.Code">
+            <summary>
+            岗位编码
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.WorkPost.Name">
+            <summary>
+            岗位名称
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.WorkerGroup.Id">
+            <summary>
+            班组ID
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.WorkerGroup.Code">
+            <summary>
+            班组编码
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.WorkerGroup.Name">
+            <summary>
+            班组名称
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.AttendanceCard.Id">
+            <summary>
+            考勤卡ID
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.AttendanceCard.CardNumber">
+            <summary>
+            考勤卡号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.AttendanceCard.CardType">
+            <summary>
+            考勤卡类别
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.AttendanceCard.IssueCardDate">
+            <summary>
+            制卡时间
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.LaborCompany.Id">
+            <summary>
+            劳务公司ID
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.LaborCompany.Code">
+            <summary>
+            劳务公司编码
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.JianWei.HttpDtos.LaborCompany.Name">
+            <summary>
+            劳务公司名称
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.JWTTokenHelper.PostClient">
+            <summary>
+            HttpClient实现Post请求
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.JWTTokenHelper.PostWebQuest">
+            <summary>
+            HttpWebRequest实现post请求
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.ServiceGroup.ServicesConfigureExtensions">
+            <summary>
+            IServiceCollection 静态扩展 配置微服务或节点类
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.ServicesConfigureExtensions.RegisterHttpsApi(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            配置微服务http调用的公共静态方法
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.Sign.HttpApis.IContractApi.Create(Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateDto,WebApiClient.Parameterables.MulitpartFile)">
+            <summary>
+            合同发起接口
+            </summary>
+            <param name="input"></param>
+            <param name="docFile"></param>
+            <returns>Success</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.Sign.HttpApis.IContractApi.Exec(Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecDto)">
+            <summary>
+            合同签署接口
+            </summary>
+            <param name="input"></param>
+            <returns>Success</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.Sign.HttpApis.ISealApi.Create(Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateDto)">
+            <summary>
+            创建签章接口
+            </summary>
+            <param name="input"></param>
+            <returns>Success</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.Sign.HttpApis.ISealApi.Cancel(Parakeet.NetCore.ServiceGroup.Sign.HttpModels.CancelSealDto)">
+            <summary>
+            签章作废接口
+            </summary>
+            <param name="input"></param>
+            <returns>Success</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.Sign.HttpApis.ISignerApi.Register(Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RegisterDto)">
+            <summary>
+            注册用户接口
+            </summary>
+            <param name="input"></param>
+            <returns>Success</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.Sign.HttpApis.ISignerApi.RealNameValidate(Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RealNameValidateDto)">
+            <summary>
+            实名认证三要素接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.Sign.HttpApis.ISignerApi.RealNameAuth(Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RealNameAuthDto)">
+            <summary>
+            实名认证四要素接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.Sign.HttpApis.ISignerApi.EnterpriseCheckApply(Parakeet.NetCore.ServiceGroup.Sign.HttpModels.EnterpriseCheckApplyDto)">
+            <summary>
+            企业打款验证申请接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.ServiceGroup.Sign.HttpApis.ISignerApi.EnterpriseCheck(Parakeet.NetCore.ServiceGroup.Sign.HttpModels.EnterpriseCheckDto)">
+            <summary>
+            企业打款验证申请接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.CancelSealDto.SealCode">
+            <summary>
+            签章编号，唯一
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateDto.ContractId">
+            <summary>
+            业务系统合同编码，系统唯一，后续签署根据此编号完成签署；具体格式和规则由请求方自行定义，但长度不能大于128字符
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateDto.ContractName">
+            <summary>
+            合同名称
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateDto.PartyCount">
+            <summary>
+            设置该合同需要几方签署,至多10方签署
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateDto.BizId">
+            <summary>
+            针对本次请求的唯一标识，系统唯一，业务流水号的具体格式和规则由请求方自行定义，但长度不能大于128字符
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateDto.BizTime">
+            <summary>
+            发起合同的业务系统处理时间，格式为yyyy-MM-dd HH:mm:ss
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateDto.FileUrl">
+            <summary>
+            HTTP文件下载地址，请在资源链接后拼接file_name参数，值为文件名称（包含后缀）
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateDto.XmlMetadata">
+             <summary>
+             如果上传的XML格式模板文件需要动态填充数据，需要在该参数设置填充的实际json值,如果上传多个XML模板文件的话，需设置多个xml_metadata，系统自动根据参数顺序自动填充
+            格式为json格式字符串 ， 例如：{"姓名":"徐荣","cardname_ID":"360111198708080899","year":"2018","month":"01","day":"01"}
+             </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateDto.DocMetadata">
+            <summary>
+            如果上传的DOCX格式模板文件需要动态填充数据，需要在该参数设置填充的实际json值，可以将多个文档的文档内的填充数据合并为一个json，例如：{"姓名":"徐荣","cardname_ID":"360111198708080899","year":"2018","month":"01","day":"01"}
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateDto.QrCode">
+             <summary>
+             在发起的合同文档添加二维码水印信息，默认这些参数的文档添加到所有文档，如果需要指定不同的水印添加到不同的文档，参数名称需要添加文档索引，比如qrcode_2的参数将添加到合同的第二个文档内；JSON格式字符串
+            例如：{"metaname":"二维码名称","x":"99%","textval":"www.tosign.cn","y":"99%"}
+             </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateDto.WaterMarkImage">
+             <summary>
+             在发起的合同文档添加图片水印，默认这些参数的文档添加到所有文档，如果需要指定不同的水印添加到不同的文档，参数名称需要添加文档索引，比如watermarkimage_2的参数将添加到合同的第二个文档内；JSON格式字符串
+            例如：{"x":"99%","y":"1%","metaname":"文字水印","imgData":"base64图片"}
+             </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateDto.WaterMarkText">
+             <summary>
+             在发起的合同文档添加文本水印，默认这些参数的文档添加到所有文档，如果需要指定不同的水印添加到不同的文档，参数名称需要添加文档索引，比如watermarktext_2的参数将添加到合同的第二个文档内；JSON格式字符串
+            例如：{"metaname":"文字水印","color":"#1873c9","x":"50%","y":"50%","fontsize":"40","textval":"电子合同部","basefont":"STXINGKA.TTF"}
+             </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateApiResult.BizId">
+            <summary>
+            业务流水号，原样返回请求方传递的业务流水号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateApiResult.ContractId">
+            <summary>
+            合同编码，原样返回请求方传递的合同编码
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateApiResult.CntId">
+            <summary>
+            合同ID，由信签服务器生成的合同ID
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateApiResult.DocOriginalUrls">
+            <summary>
+            合同内所有文档源文件下载地址
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateApiResult.DocLastUrls">
+            <summary>
+            合同内所有文档最后签署文档下载地址
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateApiResult.DocumentIds">
+            <summary>
+            合同内所有的文档ID
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateApiResult.DocumentViewUrls">
+            <summary>
+            合同内单个文件查看地址
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateApiResult.DocImageUrls">
+            <summary>
+            合同内所有的文档图片下载地址
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateApiResult.DocSignUrl">
+            <summary>
+            合同签署页面地址，用于需要在浏览器完成签署操作，需要加上签署人的相关信息，详细说明参考本章节的《浏览器合同签署》接口
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ContractCreateApiResult.DocViewUrl">
+            <summary>
+            合同查阅页面地址，用于在浏览器查阅合同
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.EnterpriseCheckApplyDto.AccountName">
+            <summary>
+            企业账户名称
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.EnterpriseCheckApplyDto.AccountNumber">
+            <summary>
+            账户号码
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.EnterpriseCheckApplyDto.BankId">
+            <summary>
+            账户银行编码 https://test.tosign.cn/tosignserver/test/bankCode.html
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.EnterpriseCheckDto.OriginalTxSn">
+            <summary>
+            原交易流水号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.EnterpriseCheckDto.Amount">
+            <summary>
+            金额（单位：分）
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecDto.ContractId">
+            <summary>
+            业务系统合同编码，系统唯一，后续签署根据此编号完成签署；具体格式和规则由请求方自行定义，但长度不能大于128字符
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecDto.BizId">
+            <summary>
+            针对本次请求的唯一标识，系统唯一，业务流水号的具体格式和规则由请求方自行定义，但长度不能大于128字符；需要注意如果签署失败，重试请将原业务流水号传递过来，所以签署前请先保存。
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecDto.BizTime">
+            <summary>
+            发起合同的业务系统处理时间，格式为yyyy-MM-dd HH:mm:ss
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecDto.BizRemark">
+            <summary>
+            业务备注
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecDto.SignerCode">
+            <summary>
+            在调用《创建签署用户》指定的签署用户编码
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecDto.Signatures">
+            <summary>
+            指定签署位置信息，JSON格式字符串，例如：[{ y:123,x:100,pageno:"1"}]
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecDto.SealCode">
+            <summary>
+            指定用户的某个签章，如果为空，将获取用户的默认签章执行盖章
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecDto.Reason">
+            <summary>
+            设置签署的信息，在签署属性原因项查看
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecDto.SignerInfo">
+            <summary>
+            其他附加签署人信息，设置除了流程外的签署人外的其他盖章位置信息，可以提交多个参数，完成多人签署
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecDto.TextInfo">
+            <summary>
+            印章水印属性属性
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecApiResult.BizId">
+            <summary>
+            业务流水号，原样返回请求方传递的业务流水号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecApiResult.ContractId">
+            <summary>
+            合同编码，原样返回请求方传递的合同编码
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecApiResult.CntId">
+            <summary>
+            合同ID，由信签服务器生成的合同ID
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecApiResult.DocViewUrl">
+            <summary>
+            合同查看签署地址
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecApiResult.LastParty">
+            <summary>
+            返回合同第几次签署
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecApiResult.SignerCode">
+            <summary>
+            返回本地签署的用户编码
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecApiResult.DocOriginalUrls">
+            <summary>
+            合同内所有文档最初源文件下载地址
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecApiResult.RecordInputUrls">
+            <summary>
+            本次签署合同内的文档的签署前下载地址
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecApiResult.RecordSavedUrls">
+            <summary>
+            本次签署合同内的文档的签署后下载地址
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecApiResult.RecordImageOriUrls">
+            <summary>
+            签署前图片地址
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecApiResult.RecordImageUrls">
+            <summary>
+            本次签署的文档图片下载地址
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.ExecApiResult.EvidenceQueryUrls">
+            <summary>
+            存证证书下载地址，注：在完成合同签署之后，请等待至少30分钟后再调用该接口，以防获取证书失败。
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.QrCode.MetaName">
+            <summary>
+            水印名称
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.QrCode.TextVal">
+            <summary>
+            二维码信息
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.QrCode.X">
+            <summary>
+            二维码X坐标位置，以文档页面左边为起点向右偏移x位置 (支持像素和百分比设置)
+            例如:x:”50”或者 x:”50%”
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.QrCode.Y">
+            <summary>
+            二维码Y坐标位置，以文档页面左边为起点向右偏移y位置 (支持像素和百分比设置
+            例如:y:”50”或者y:”50%”
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.QrCode.Width">
+            <summary>
+            二维码宽度 ，默认200
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.QrCode.Height">
+            <summary>
+            二维码宽度 ，默认200
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RealNameAuthDto.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RealNameAuthDto.IdCode">
+            <summary>
+            身份证编号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RealNameAuthDto.Phone">
+            <summary>
+            银行卡预留手机号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RealNameAuthDto.CardNumber">
+            <summary>
+            银行卡号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RealNameValidateDto.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RealNameValidateDto.IdCode">
+            <summary>
+            身份证编号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RealNameValidateDto.Phone">
+            <summary>
+            银行卡预留手机号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RegisterDto.Code">
+            <summary>
+            签署用户编码，唯一标识
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RegisterDto.Name">
+            <summary>
+            签署用户名称
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RegisterDto.Phone">
+            <summary>
+            签署用户手机号码
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RegisterDto.Type">
+            <summary>
+            签署用户类型 ，默认值：1， 可选【1：个人用户，2：企业用户】
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RegisterDto.IdType">
+             <summary>
+             签署用户证件类型 ，默认值：0，
+            可选【0：居民身份证，1：护照，B：港澳居民往来内地通行证，C：台湾居民来往大陆通行证，
+            2：社会信用代码，3：工商登记证，4：税务登记证，7：组织机构代码证，8：企业营业执照 ，Z：其他】
+             </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RegisterDto.IdCode">
+            <summary>
+            签署用户证件编号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RegisterDto.CertType">
+            <summary>
+            签署用户证书类型 ，不传递参数不创建， 可选【1：文件证书，2：普通证书,4：事件证书】
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RegisterDto.CertData">
+            <summary>
+            当证书类型参数为文件证书时，需要上传base64文件证书
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RegisterDto.CertPassword">
+            <summary>
+            当证书类型参数为文件证书时，设置文件证书的密码
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateDto.SignerCode">
+            <summary>
+            绑定用户编号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateDto.SealCode">
+            <summary>
+            签章编号，唯一
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateDto.SealName">
+            <summary>
+            签章名称
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateDto.SealIsDefault">
+            <summary>
+            是否默认;默认为非默认状态，(1)为默认 ,
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateDto.SealTypes">
+            <summary>
+            签章类型 ：业务专用章(1),财务专用章(2),发票专用章(3);可为逗号分隔的字符串
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateDto.SealImg">
+            <summary>
+            签章图片base64;如果传递图片则默认根据图片生成签章
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateDto.SealHeight">
+            <summary>
+            签章图片高度（cm）
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateDto.SealWidth">
+            <summary>
+            签章图片宽度（cm）
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateDto.SealForm">
+            <summary>
+            签章样式：人名方章(1)，企业圆章(2);不传递签章图片则根据签章样式生成签章
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateDto.SealLicenseNo">
+            <summary>
+            防伪数字，企业圆章下弦月的文字内容
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateApiResult.SealWidth">
+            <summary>
+            实际签章宽度：单位（px）
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateApiResult.SealHeight">
+            <summary>
+            实际签章高度：单位（px）
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateApiResult.SealData">
+            <summary>
+            签章数据
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateApiResult.SealFmt">
+            <summary>
+            签章图片格式
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateApiResult.SealName">
+            <summary>
+            签章图片名称
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateApiResult.Message">
+            <summary>
+            结果信息
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateApiResult.SignerCode">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateApiResult.SealCode">
+            <summary>
+            签章编号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateApiResult.SealCmWidth">
+            <summary>
+            签章宽度：单位（CM）
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.SealCreateApiResult.SealCmHeight">
+            <summary>
+            签章高度：单位（CM）
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RealNameAuthApiResult.Status">
+            <summary>
+            认证结果代码：【0：认证成功，其他代码认证表示认证失败，详细信息参考message】
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RealNameAuthApiResult.Message">
+            <summary>
+            认证结果信息
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RealNameAuthApiResult.ResultTime">
+            <summary>
+            调用时间
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.RealNameAuthApiResult.Success">
+            <summary>
+            调用结果，true表示调用接口成功，false表示调用接口失败
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.EnterpriseCheckApplyApiResult.Status">
+            <summary>
+            申请结果（20：申请成功 30 or 10：申请失败）
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.EnterpriseCheckApplyApiResult.Message">
+            <summary>
+            申请结果信息
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.EnterpriseCheckApplyApiResult.TxSN">
+            <summary>
+            交易流水号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.EnterpriseCheckApiResult.Status">
+            <summary>
+            申请结果（20：申请成功 30 or 10：申请失败）
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.EnterpriseCheckApiResult.Message">
+            <summary>
+            申请结果信息
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.WaterMarkImage.MetaName">
+            <summary>
+            水印名称
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.WaterMarkImage.X">
+            <summary>
+            图片水印放置X坐标位置，以文档页面左边为起点向右偏移x位置 (支持像素和百分比设置)
+            例如:x:”50”或者 x:”50%”
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.WaterMarkImage.Y">
+            <summary>
+            图片水印放置Y坐标位置，以文档页面左边为起点向右偏移y位置 (支持像素和百分比设置)
+            例如:y:”50”或者y:”50%”
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.WaterMarkImage.ImgData">
+            <summary>
+            base64格式的水印图片
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.WaterMarkText.MetaName">
+            <summary>
+            水印名称
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.WaterMarkText.TextVal">
+            <summary>
+            文本水印
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.WaterMarkText.X">
+            <summary>
+            二维码放置X坐标位置，以文档页面左边为起点向右偏移x位置 (支持像素和百分比设置)
+            例如:x:”50”或者 x:”50%”
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.WaterMarkText.Y">
+             <summary>
+             二维码放置Y坐标位置，以文档页面左边为起点向右偏移y位置 (支持像素和百分比设置)
+            例如:y:”50”或者y:”50%”
+             </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.WaterMarkText.Color">
+            <summary>
+            16进制RGB颜色类型，例如#00ff00。（默认#000000，纯黑）
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.WaterMarkText.FontSize">
+            <summary>
+            文字大小，默认40
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.WaterMarkText.BaseFont">
+            <summary>
+            文字字体：默认：SIMLI.TTF ，可选：MSYH.TTF (微软雅黑)，STXINGKA.TTF（行楷），SIMSUN.TTC（宋体），SIMLI.TTF（隶书），SIMKAI.TTF（楷体）
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.WaterMarkText.Rotation">
+            <summary>
+            文字旋转角度,默认：0，可选【0、90、180、270】
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.WaterMarkText.CrossPage">
+            <summary>
+            是否跨页，默认：0，可选【0：不跨页，1：跨页】
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.ServiceGroup.Sign.HttpModels.WaterMarkText.FillOpacity">
+            <summary>
+            水印透明度，默认不透明，选址范围：0~100的值，100为不透明，默认：20
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.ServiceGroup.Sign.SignAppKeyAttribute">
+            <summary>
+            AppKey过滤器
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.ServiceGroup.Sign.SignOption">
+            <summary>
+            金格免费签章
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.ServiceGroup.Sms.SMSHelper">
+            <summary>
+            发送短信帮助类
+            目前资料系统没有使用该帮助类
+            发送短信是统一调用SpiderBim的SSO短信相关接口
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.Suppliers.ISupplierAppService">
+            <summary>
+            供应商服务 ISupplierAppService
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Suppliers.ISupplierAppService.GetPagedResult(Parakeet.NetCore.Dtos.GetSuppliersInputDto)">
+            <summary>
+             获取列表数据(分页)
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Suppliers.ISupplierAppService.GetSupplierFilterList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+             获取所有供应商列表数据
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Suppliers.ISupplierAppService.GetSupplierSelectList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            获取供应商下拉列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Suppliers.SupplierAppService">
+            <summary>
+            供应商服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Suppliers.SupplierAppService.GetGet(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            获取Get(扩展) 提供给devExtreme
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Suppliers.SupplierAppService.GridData(Parakeet.NetCore.Dtos.LoadOptionInputDto)">
+            <summary>
+            获取GridData(Post扩展)  提供给devExtreme
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Suppliers.SupplierAppService.GetPagedResult(Parakeet.NetCore.Dtos.GetSuppliersInputDto)">
+            <summary>
+             获取列表数据(分页)
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Suppliers.SupplierAppService.GetSupplierFilterList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+             获取所有供应商列表数据
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Suppliers.SupplierAppService.GetSupplierSelectList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            获取供应商下拉列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Test.TestAppService.OnGetOperation">
+            <summary>
+            测试IOperationTransient IOperationSingleton IOperationScoped
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Test.TestAppService.GetEncryptedPassword(System.String)">
+            <summary>
+            获取加密密码字符串 需要Test权限
+            </summary>
+            <param name="password">未加密密码字符串</param>
+            <returns>加密密码字符串</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Test.TestAppService.AddProducer">
+            <summary>
+            添加生产者 需要RabbitMQ权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Test.TestAppService.OneProducerToOneTestAppService">
+            <summary>
+            单生产者单消费者测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Test.TestAppService.MultipleProducerToOneConsumerConcurrencyTest">
+            <summary>
+            多生产者单消费者并发批量消费测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Test.TestAppService.Handler(System.ValueTuple{System.String,System.UInt64})">
+            <summary>
+            消费者委托
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Test.TestAppService.BatchHandler(System.Collections.Generic.List{System.ValueTuple{System.String,System.UInt64}})">
+            <summary>
+            消费者委托 批量
+            </summary>
+            <param name="bodyList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Test.TestAppService.ExceptionlessTest">
+            <summary>
+            Exceptionless 测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Test.TestAppService.GetProjectWorker">
+            <summary>
+            从第三方平台人员信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Test.TestAppService.ROClientTest">
+            <summary>
+            ROClientTest
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Test.TestAppService.EnvironmentShowTest">
+            <summary>
+            环境变量 测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Test.TestAppService.WeixinLoginQrCode">
+            <summary>
+            企业微信测试接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Test.TestAppService.WeixinLogin">
+            <summary>
+            企业微信测试接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Thresholds.IThresholdAppService">
+            <summary>
+            阈值管理
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.Thresholds.ThresholdAppService">
+            <summary>
+            阈值管理
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Thresholds.ThresholdAppService.GetGet(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            获取Get(扩展) 提供给devExtreme
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Thresholds.ThresholdAppService.GridData(Parakeet.NetCore.Dtos.LoadOptionInputDto)">
+            <summary>
+            获取GridData(Post扩展)  提供给devExtreme
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Thresholds.ThresholdAppService.GetThresholdFilterList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+             获取所有供应商列表数据
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Thresholds.ThresholdAppService.GetThresholdSelectBox(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            获取供应商下拉列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Workers.IWorkerAppService">
+            <summary>
+            工人服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Workers.IWorkerAppService.GetWorkerSelectList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            获取工人下拉列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Workers.WorkerAppService">
+            <summary>
+            工人服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Workers.WorkerAppService.GetGet(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            获取Get(扩展) 提供给devExtreme
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Workers.WorkerAppService.GetWorkerSelectList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            获取工人下拉列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.WorkerTypes.IWorkerTypeAppService">
+            <summary>
+            工种服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.WorkerTypes.IWorkerTypeAppService.GetWorkerTypeSelectList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            获取工种下拉列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.WorkerTypes.WorkerTypeAppService">
+            <summary>
+            工种服务
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.WorkerTypes.WorkerTypeAppService.GetGet(DevExtreme.AspNet.Data.DataSourceLoadOptionsBase)">
+            <summary>
+            获取Get(扩展) 提供给devExtreme
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.WorkerTypes.WorkerTypeAppService.GetWorkerTypeSelectList(Parakeet.NetCore.Dtos.InputIdNullDto)">
+            <summary>
+            获取工种下拉列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.WorkerTypes.WorkerTypeDtoMapper">
+            <summary>
+            客户需求实体-dto映射
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.XiamenHuizhan.SectionExtention">
+            <summary>
+            扩展
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.XiamenHuizhan.SectionExtention.SectionOneEnvironmentRealTimeRequest(Parakeet.NetCore.Dtos.RequestParameterDto)">
+            <summary>
+            一标段环境设备实时数据请求
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.XiamenHuizhan.SectionExtention.SectionOneGateHistoryRequest(Parakeet.NetCore.Dtos.RequestParameterDto)">
+            <summary>
+            一标段考勤历史记录请求
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.XiamenHuizhan.SectionExtention.SectionTwoEnvironmentRealTimeRequest(Parakeet.NetCore.Dtos.RequestParameterDto)">
+            <summary>
+            二标段环境设备实时数据请求
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.XiamenHuizhan.SectionExtention.SectionTwoGateHistoryRequest(Parakeet.NetCore.Dtos.RequestParameterDto)">
+            <summary>
+            2标段考勤入历史记录请求
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.XiamenHuizhan.SectionExtention.GetXiamenSectionTwoSign(System.String,System.Object)">
+            <summary>
+            获取厦门会展二标段劳务实名制网站加密
+            </summary>
+            <param name="appSecret">密钥</param>
+            <param name="input">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.XiamenHuizhan.SectionExtention.ConvertBinaryToHexValueString(System.Collections.Generic.IEnumerable{System.Byte})">
+            <summary>
+            转换二进制位16进制字符串
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentReturnData">
+            <summary>
+            一标段返回数据外层对象 SectionOneEnvironmentReturnData
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentReturnData.Code">
+            <summary>
+            返回编码
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentReturnData.Data">
+            <summary>
+            返回根节点数据
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentReturnData.Msg">
+            <summary>
+            返回消息
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentRootData">
+            <summary>
+            SectionOneEnvironmentRootData
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentRootData.Data">
+            <summary>
+            数据结构
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentRootData.DataId">
+            <summary>
+            数据Id
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentRootData.DeviceId">
+            <summary>
+            设备Id
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentRootData.DeviceTypeId">
+            <summary>
+            设备类型Id
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentRootData.Time">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData">
+            <summary>
+            SectionOneEnvironmentData
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.Pm10Rtd">
+            <summary>
+            PM10
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.Pm10Flag">
+            <summary>
+            PM10-Flag
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.Pm25Rtd">
+            <summary>
+            PM25
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.Pm25Flag">
+            <summary>
+            PM25-Flag
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.WsRtd">
+            <summary>
+            WS-Rtd 风速
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.WsFlag">
+            <summary>
+            WS-Flag
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.DataTime">
+            <summary>
+            DataTime
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.DateTimeFormat">
+            <summary>
+            格式化时间
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.WdRtd">
+            <summary>
+            WdRtd 风向
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.WdFlag">
+            <summary>
+            WD-Flag
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.PaRtd">
+            <summary>
+            PaRtd 压强
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.PaFlag">
+            <summary>
+            PA-Flag
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.TemRtd">
+            <summary>
+            TEM-Rtd 温度
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.TemFlag">
+            <summary>
+            TEM-Flag
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.TspRtd">
+            <summary>
+            TSP-Rtd 总悬浮颗粒物 
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.TspFlag">
+            <summary>
+            TSP-Flag
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.B03Rtd">
+            <summary>
+            B03-Rtd 噪音
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.B03Flag">
+            <summary>
+            B03-Flag
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.RhRtd">
+            <summary>
+            RH-Rtd 湿度
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneEnvironmentData.RhFlag">
+            <summary>
+            RH-Flag
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.XiamenHuizhan.SectionOneGateReturnData">
+            <summary>
+            一标段考勤返回数据外层对象 SectionOneGateReturnData
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateReturnData.Code">
+            <summary>
+            返回编码
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateReturnData.Data">
+            <summary>
+            返回根节点数据
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateReturnData.Msg">
+            <summary>
+            返回消息
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.XiamenHuizhan.SectionOneGateRootData">
+            <summary>
+            SectionOneGateRootData
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateRootData.Data">
+            <summary>
+            数据结构
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateRootData.PageSize">
+            <summary>
+            PageSize
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateRootData.EnableSolrQuery">
+            <summary>
+            EnableSolrQuery
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateRootData.PassDataPermissionAuth">
+            <summary>
+            PassDataPermissionAuth
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateRootData.OnlyTopAndSelf">
+            <summary>
+            OnlyTopAndSelf
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateRootData.PageIndex">
+            <summary>
+            PageIndex
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateRootData.Draw">
+            <summary>
+            Draw
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateRootData.RecordsTotal">
+            <summary>
+            RecordsTotal
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateRootData.PassFilterDeletedStatus">
+            <summary>
+            PassFilterDeletedStatus
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateRootData.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateRootData.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.XiamenHuizhan.SectionOneGateData">
+            <summary>
+            SectionOneGateData
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateData.SubContractorSysNo">
+            <summary>
+            SubContractorSysNo
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateData.WorkerSysNo">
+            <summary>
+            WorkerSysNo
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateData.CheckChannel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateData.TeamSysNo">
+            <summary>
+            TeamSysNo
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateData.Time">
+            <summary>
+            Time
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateData.Gender">
+            <summary>
+            Gender
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateData.TeamName">
+            <summary>
+             TeamName eg:升恒监理
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateData.SubContractorName">
+            <summary>
+            SubContractorName eg:福建升恒建设集团有限公司
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateData.Image">
+            <summary>
+            Image 
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateData.WorkerName">
+            <summary>
+            WorkerName
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateData.ProjectSysNo">
+            <summary>
+            ProjectSysNo
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateData.Type">
+            <summary>
+            Type 进出类型
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateData.InDate">
+            <summary>
+            InDate
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateData.SerialNumber">
+            <summary>
+            SerialNumber
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateData.IDCardNumber">
+            <summary>
+            IDCardNumber
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionOneGateData.FaceSimilarity">
+            <summary>
+            FaceSimilarity
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.XiamenHuizhan.SectionTwoEnvironmentReturnData">
+            <summary>
+            SectionTwoEnvironmentReturnData
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoEnvironmentReturnData.Code">
+            <summary>
+            Code
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoEnvironmentReturnData.Message">
+            <summary>
+            接口调用成功
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoEnvironmentReturnData.Timestamp">
+            <summary>
+            Timestamp
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoEnvironmentReturnData.Content">
+            <summary>
+            Content
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.XiamenHuizhan.SectionTwoEnvironmentContent">
+            <summary>
+            SectionTwoEnvironmentContent
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoEnvironmentContent.DeviceId">
+            <summary>
+            DeviceId
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoEnvironmentContent.Live">
+            <summary>
+            在线
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoEnvironmentContent.DateTime">
+            <summary>
+            DateTime
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoEnvironmentContent.RealtimeData">
+            <summary>
+            RealtimeData
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.XiamenHuizhan.SectionTwoEnvironmentData">
+            <summary>
+            SectionTwoEnvironmentData
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoEnvironmentData.Sensor">
+            <summary>
+            Sensor对照字段
+            PM10:a34002
+            PM2.5:a34004
+            噪声:a50001
+            风速:a01007
+            风向:a01008
+            温度:a01001
+            湿度:a01002
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoEnvironmentData.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoEnvironmentData.Flag">
+            <summary>
+            Flag
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoEnvironmentData.Data">
+            <summary>
+            Data
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoEnvironmentData.Max">
+            <summary>
+            Max
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoEnvironmentData.Min">
+            <summary>
+            Min
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateReturnData">
+            <summary>
+            一标段考勤返回数据外层对象 SectionTwoGateReturnData
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateReturnData.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateReturnData.Code">
+            <summary>
+            返回编码
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateReturnData.Message">
+            <summary>
+            返回消息
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateReturnData.Data">
+            <summary>
+            数据结构
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData">
+            <summary>
+            SectionTwoGateData
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.Id">
+            <summary>
+            打卡id
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.Date">
+            <summary>
+            打卡日期
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.ClockedTime">
+            <summary>
+            打卡时间
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.Identification">
+            <summary>
+            身份证号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.GroupId">
+            <summary>
+            班组Id
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.TeamId">
+            <summary>
+            队伍Id
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.WorkTypeCode">
+            <summary>
+            工种编码
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.CompanyId">
+            <summary>
+            公司Id
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.VendorId">
+            <summary>
+            平台对应分包商ID
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.ProjectWorkerId">
+            <summary>
+            平台对应班组Id
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.LaborWorkerId">
+            <summary>
+            项目工人履历ID
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.Calculate">
+            <summary>
+            是否计算工时 1计算工时，0不计算，默认计算，新产品返回都是1
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.DeviceCode">
+            <summary>
+            设备编号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.DeviceType">
+            <summary>
+            设备类型
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.WorkerId">
+            <summary>
+            工人Id
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.WorkerName">
+            <summary>
+            工人姓名
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.ScanPhoto">
+            <summary>
+            打卡照片
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.ClockTypeDesc">
+            <summary>
+            打卡类型描述
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.ClockType">
+            <summary>
+            打卡类型
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.PlatformGroupId">
+            <summary>
+            平台对应队伍id
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.PlatformTeamId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.Temperature">
+            <summary>
+            温度
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.IcCard">
+            <summary>
+            ic卡号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.HatCode">
+            <summary>
+            安全帽编号
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.RegionId">
+            <summary>
+            施工区域Id
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.RegionName">
+            <summary>
+            施工区
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.WorkPointId">
+            <summary>
+            部位id
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.WorkPointName">
+            <summary>
+            部位名称 
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.SegmentId">
+            <summary>
+            围栏id
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.SegmentName">
+            <summary>
+            围栏名称
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.AreaId">
+            <summary>
+            工区Id
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.AreaName">
+            <summary>
+            工区名称
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.Longitude">
+            <summary>
+            经度
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.Latitude">
+            <summary>
+            纬度
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.InOutType">
+            <summary>
+            IN进，OUT出
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.WorkTypeName">
+            <summary>
+            工种
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.TeamName">
+            <summary>
+            队名
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.GroupName">
+            <summary>
+            钢结构一队
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.XiamenHuizhan.SectionTwoGateData.CompanyName">
+            <summary>
+            公司名称
+            </summary>
+        </member>
+    </members>
+</doc>

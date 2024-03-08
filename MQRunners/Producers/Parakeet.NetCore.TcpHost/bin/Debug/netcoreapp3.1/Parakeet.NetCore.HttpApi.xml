@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Parakeet.NetCore.HttpApi</name>
+    </assembly>
+    <members>
+        <member name="T:Parakeet.NetCore.Attributes.CustomRouteAttribute">
+            <summary>
+            自定义路由属性
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.Attributes.CustomRouteAttribute.GroupName">
+            <summary>
+            分组名称,实现接口 IApiDescriptionGroupNameProvider
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Attributes.CustomRouteAttribute.#ctor(System.String)">
+            <summary>
+            自定义路由构造函数，继承基类路由
+            </summary>
+            <param name="actionName"></param>
+        </member>
+        <member name="M:Parakeet.NetCore.Attributes.CustomRouteAttribute.#ctor(Parakeet.NetCore.Enums.VersionType,System.String)">
+            <summary>
+            自定义版本+路由构造函数，继承基类路由
+            </summary>
+            <param name="actionName"></param>
+            <param name="version"></param>
+        </member>
+        <member name="T:Parakeet.NetCore.Controllers.AuthenticationController">
+            <summary>
+            自定义鉴权测试
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.AuthenticationController.Authentication">
+            <summary>
+            认证
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Controllers.AuthorController">
+            <summary>
+            作者简介
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.Controllers.AuthorizationController">
+            <summary>
+            自定义授权测试
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.AuthorizationController.Info">
+            <summary>
+            需要授权的页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.AuthorizationController.InfoCustomScheme">
+            <summary>
+            需要授权的页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Controllers.BaseEntityController`2">
+            <summary>
+            泛型基类Controller，用于DevExtreme的CRUD
+            </summary>
+            <typeparam name="TEntity">实体</typeparam>
+             <typeparam name="TPrimaryKey">实体主键类型</typeparam>
+        </member>
+        <member name="T:Parakeet.NetCore.Controllers.IOTControllerBase">
+            <summary>
+            物联网Controller基类
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.IOTControllerBase.GetOrigin">
+            <summary>
+            获取请求原始数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.IOTControllerBase.PublishAsync(System.Byte[],System.String)">
+            <summary>
+            发布至 MQ
+            </summary>
+            <param name="buffer">二进制数据</param>
+            <param name="name">生产者容器名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.IOTControllerBase.PublishAsync``1(Parakeet.NetCore.Dtos.WrapperData{``0},System.String)">
+            <summary>
+            发布至 MQ
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="wrapperData">数据对象</param>
+            <param name="routingKey">生产者名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.IOTControllerBase.PublishAsync``1(Parakeet.NetCore.Dtos.WrapperData{``0},System.String,System.String)">
+            <summary>
+            发布至MQ
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="wrapperData">数据包装层</param>
+            <param name="name">生产者名称</param>
+            <param name="routingKey">路由键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.IOTControllerBase.PublishAsync(System.Byte[],System.String,System.String)">
+            <summary>
+            发布至 MQ
+            </summary>
+            <param name="buffer">二进制数组</param>
+            <param name="name">生产者名称</param>
+            <param name="routeKey">路由键</param>
+            <returns>设备</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.IOTControllerBase.GetDeviceBySerialNo(System.String)">
+            <summary>
+            根据序列号获取设备信息
+            </summary>
+            <param name="serialNo">设备序列号</param>
+            <returns>设备</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.IOTControllerBase.GetDeviceByFakeNo(System.String)">
+            <summary>
+            根据转发编码获取设备
+            </summary>
+            <param name="fakeNo">设备转发编码</param>
+            <returns>设备</returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.IOTControllerBase.GetModelStateError">
+            <summary>
+            测试ModelState返回值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.LocationAreaController.ImportFiles(Parakeet.NetCore.Dtos.ImportFileDto)">
+            <summary>
+            根据导入的模板数据生成结构树
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Controllers.NeedController">
+            <summary>
+            需求
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.NeedController.UploadFile(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            UploadFile Request.Form.Files接收文件 Request.Form["uploadGuid"]传递uploadGuid
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.NeedController.Download(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            提供给用户下载
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.NeedController.DownloadFile(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            下载物理文件(给img标签 src属性)
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.NeedController.RemoveAttachment(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            提供给用户删除文件
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.NeedController.ReadEmail(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            打开邮件时自动进入 <img style='display:none;' src='" + domail + "User/IsReader?username=zhangsan' />
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.NetCoreController.EJson(System.Object)">
+            <summary>
+            返回错误+对象
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.NetCoreController.FJson(System.Object)">
+            <summary>
+            返回错误消息+对象
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.NetCoreController.RJson(System.Boolean,System.String)">
+            <summary>
+            提供给返回字符串专用
+            </summary>
+            <param name="status"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Parakeet.NetCore.Controllers.OrganizationController">
+            <summary>
+            组织机构
+            </summary>
+        </member>
+        <member name="T:Parakeet.NetCore.Controllers.ProjectController">
+            <summary>
+            项目
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.ProjectController.UploadFile(Parakeet.NetCore.Dtos.InputIdDto)">
+            <summary>
+            UploadFile Request.Form.Files接收文件 Request.Form["uploadGuid"]传递uploadGuid
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.ProjectController.Tiku">
+            <summary>
+            下载题库文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Parakeet.NetCore.Controllers.TokenAuthController._serviceProvider">
+            <summary>
+            IServiceProvider负责提供实例 (IServiceCollection(context.Services)负责注册)
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.Controllers.TokenAuthController.ClientOptions">
+            <summary> 
+            从配置文件节点中自动获取
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.TokenAuthController.Authenticate(Parakeet.NetCore.Models.AuthenticateModel)">
+            <summary>
+            返回AccessToken
+            </summary>
+            <param name="login"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.TokenAuthController.RefreshToken(Parakeet.NetCore.Dtos.RefreshTokenInputDto)">
+            <summary>
+            刷新token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Parakeet.NetCore.Controllers.TokenAuthController.GetIotToken(Parakeet.NetCore.Dtos.AppTokenInputDto)">
+            <summary>
+            获取IOT接口token
+            </summary>
+            <param name="input">获取token输入类</param>
+            <returns></returns>
+        </member>
+        <member name="P:Parakeet.NetCore.Models.AuthenticateModel.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Parakeet.NetCore.Models.AuthenticateModel.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="M:Parakeet.NetCore.Models.AuthenticateModel.Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            验证
+            </summary>
+            <param name="validationContext"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

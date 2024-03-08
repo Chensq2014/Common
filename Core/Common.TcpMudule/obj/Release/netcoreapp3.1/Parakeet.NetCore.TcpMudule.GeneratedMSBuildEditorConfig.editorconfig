@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = Parakeet.NetCore.TcpMudule
+build_property.ProjectDir = D:\Projects\ParakeetABPCore\aspnet-core\src\Core\Parakeet.NetCore.TcpMudule\

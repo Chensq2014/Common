@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\Config\common.props" />
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<RootNamespace>Common.TcpMudule</RootNamespace>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common.Shared\Common.Shared.csproj" />
+  </ItemGroup>
+</Project>

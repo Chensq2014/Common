@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = Parakeet.NetCore.Producer
+build_property.ProjectDir = D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Producers\Parakeet.NetCore.Producer\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

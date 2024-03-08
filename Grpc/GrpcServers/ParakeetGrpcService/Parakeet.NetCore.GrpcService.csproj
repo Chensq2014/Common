@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\CustomMath.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.31.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="3.1.2" />
+    <PackageReference Include="Volo.Abp.Autofac" Version="3.1.2" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Authentication.JwtBearer" Version="3.1.2" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Parakeet.NetCore.Application\Parakeet.NetCore.Application.csproj" />
+  </ItemGroup>
+
+</Project>

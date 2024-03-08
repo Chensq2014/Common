@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = Parakeet.NetCore.GrpcService
+build_property.ProjectDir = D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcServers\ParakeetGrpcService\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

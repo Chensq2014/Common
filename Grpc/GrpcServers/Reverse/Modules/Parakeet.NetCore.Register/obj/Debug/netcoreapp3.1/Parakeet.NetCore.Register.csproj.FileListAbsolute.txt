@@ -1,0 +1,17 @@
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcServers\Reverse\Parakeet.NetCore.ROServer\bin\Debug\netcoreapp3.1\Plugins\netcoreapp3.1\Localization\NetCore\en.json
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcServers\Reverse\Parakeet.NetCore.ROServer\bin\Debug\netcoreapp3.1\Plugins\netcoreapp3.1\Localization\NetCore\zh-Hans.json
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcServers\Reverse\Parakeet.NetCore.ROServer\bin\Debug\netcoreapp3.1\Plugins\netcoreapp3.1\Parakeet.NetCore.Domain.Shared.xml
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcServers\Reverse\Parakeet.NetCore.ROServer\bin\Debug\netcoreapp3.1\Plugins\netcoreapp3.1\Parakeet.NetCore.Domain.xml
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcServers\Reverse\Parakeet.NetCore.ROServer\bin\Debug\netcoreapp3.1\Plugins\netcoreapp3.1\Parakeet.NetCore.EntityFrameworkCore.xml
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcServers\Reverse\Parakeet.NetCore.ROServer\bin\Debug\netcoreapp3.1\Plugins\netcoreapp3.1\Parakeet.NetCore.Application.Contracts.xml
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcServers\Reverse\Parakeet.NetCore.ROServer\bin\Debug\netcoreapp3.1\Plugins\netcoreapp3.1\Parakeet.NetCore.Register.deps.json
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcServers\Reverse\Parakeet.NetCore.ROServer\bin\Debug\netcoreapp3.1\Plugins\netcoreapp3.1\Parakeet.NetCore.Register.dll
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcServers\Reverse\Parakeet.NetCore.ROServer\bin\Debug\netcoreapp3.1\Plugins\netcoreapp3.1\Parakeet.NetCore.Register.pdb
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcServers\Reverse\Modules\Parakeet.NetCore.Register\obj\Debug\netcoreapp3.1\Parakeet.NetCore.Register.csproj.AssemblyReference.cache
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcServers\Reverse\Modules\Parakeet.NetCore.Register\obj\Debug\netcoreapp3.1\Parakeet.NetCore.Register.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcServers\Reverse\Modules\Parakeet.NetCore.Register\obj\Debug\netcoreapp3.1\Parakeet.NetCore.Register.AssemblyInfoInputs.cache
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcServers\Reverse\Modules\Parakeet.NetCore.Register\obj\Debug\netcoreapp3.1\Parakeet.NetCore.Register.AssemblyInfo.cs
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcServers\Reverse\Modules\Parakeet.NetCore.Register\obj\Debug\netcoreapp3.1\Parakeet.NetCore.Register.csproj.CoreCompileInputs.cache
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcServers\Reverse\Modules\Parakeet.NetCore.Register\obj\Debug\netcoreapp3.1\Parakeet.NetCore.Register.csproj.CopyComplete
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcServers\Reverse\Modules\Parakeet.NetCore.Register\obj\Debug\netcoreapp3.1\Parakeet.NetCore.Register.dll
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcServers\Reverse\Modules\Parakeet.NetCore.Register\obj\Debug\netcoreapp3.1\Parakeet.NetCore.Register.pdb

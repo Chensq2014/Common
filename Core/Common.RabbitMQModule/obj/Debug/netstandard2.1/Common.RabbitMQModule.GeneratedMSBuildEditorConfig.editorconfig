@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = Common.RabbitMQModule
+build_property.ProjectDir = D:\Projects\Common\Core\Common.RabbitMQModule\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

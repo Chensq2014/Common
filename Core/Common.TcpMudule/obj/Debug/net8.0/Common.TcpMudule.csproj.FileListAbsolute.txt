@@ -1,0 +1,16 @@
+D:\Projects\Common\Core\Common.TcpMudule\obj\Debug\net8.0\Common.TcpMudule.csproj.AssemblyReference.cache
+D:\Projects\Common\Core\Common.TcpMudule\obj\Debug\net8.0\Common.TcpMudule.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Common\Core\Common.TcpMudule\obj\Debug\net8.0\Common.TcpMudule.AssemblyInfoInputs.cache
+D:\Projects\Common\Core\Common.TcpMudule\obj\Debug\net8.0\Common.TcpMudule.AssemblyInfo.cs
+D:\Projects\Common\Core\Common.TcpMudule\obj\Debug\net8.0\Common.TcpMudule.csproj.CoreCompileInputs.cache
+D:\Projects\Common\Core\Common.TcpMudule\obj\Debug\net8.0\Common.TcpMudule.sourcelink.json
+D:\Projects\Common\Core\Common.TcpMudule\bin\Debug\net8.0\Common.TcpMudule.deps.json
+D:\Projects\Common\Core\Common.TcpMudule\bin\Debug\net8.0\Common.TcpMudule.dll
+D:\Projects\Common\Core\Common.TcpMudule\bin\Debug\net8.0\Common.TcpMudule.pdb
+D:\Projects\Common\Core\Common.TcpMudule\bin\Debug\net8.0\Common.Shared.dll
+D:\Projects\Common\Core\Common.TcpMudule\bin\Debug\net8.0\Common.Shared.pdb
+D:\Projects\Common\Core\Common.TcpMudule\obj\Debug\net8.0\Common.TcpMudule.csproj.CopyComplete
+D:\Projects\Common\Core\Common.TcpMudule\obj\Debug\net8.0\Common.TcpMudule.dll
+D:\Projects\Common\Core\Common.TcpMudule\obj\Debug\net8.0\refint\Common.TcpMudule.dll
+D:\Projects\Common\Core\Common.TcpMudule\obj\Debug\net8.0\Common.TcpMudule.pdb
+D:\Projects\Common\Core\Common.TcpMudule\obj\Debug\net8.0\ref\Common.TcpMudule.dll

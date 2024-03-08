@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Common.TcpMudule": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

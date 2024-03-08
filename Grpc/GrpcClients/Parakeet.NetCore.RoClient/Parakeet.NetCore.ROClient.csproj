@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.1;netstandard2.0</TargetFrameworks>
+    <Version>4.2.2</Version>
+    <AssemblyVersion>4.2.2.0</AssemblyVersion>
+    <Authors>TomLiu</Authors>
+    <Company>ARchGL</Company>
+    <Product>SPD.IOT</Product>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.1|AnyCPU'">
+    <DocumentationFile>Parakeet.NetCore.ROClient.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
+    <PackageReference Include="Grpc.Net.Client" Version="2.33.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Parakeet.NetCore.ROClient.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Parakeet.NetCore.ROClient.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.19.3" />
+    <PackageReference Include="Grpc" Version="2.33.1" />
+    <PackageReference Include="Grpc.Core" Version="2.33.1" />
+    <PackageReference Include="Grpc.Tools" Version="2.33.1" PrivateAssets="All" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\..\Protos\Reverse.proto" Link="Protos\Reverse.proto" GrpcServices="Client" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,17 @@
+D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Consumers\Parakeet.NetCore.ConsumerServer\bin\Debug\netcoreapp3.1\Plugins\netcoreapp3.1\Localization\NetCore\en.json
+D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Consumers\Parakeet.NetCore.ConsumerServer\bin\Debug\netcoreapp3.1\Plugins\netcoreapp3.1\Localization\NetCore\zh-Hans.json
+D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Consumers\Parakeet.NetCore.ConsumerServer\bin\Debug\netcoreapp3.1\Plugins\netcoreapp3.1\Parakeet.NetCore.Domain.Shared.xml
+D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Consumers\Parakeet.NetCore.ConsumerServer\bin\Debug\netcoreapp3.1\Plugins\netcoreapp3.1\Parakeet.NetCore.Application.Contracts.xml
+D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Consumers\Parakeet.NetCore.ConsumerServer\bin\Debug\netcoreapp3.1\Plugins\netcoreapp3.1\Parakeet.NetCore.Domain.xml
+D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Consumers\Parakeet.NetCore.ConsumerServer\bin\Debug\netcoreapp3.1\Plugins\netcoreapp3.1\Parakeet.NetCore.EntityFrameworkCore.xml
+D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Consumers\Parakeet.NetCore.ConsumerServer\bin\Debug\netcoreapp3.1\Plugins\netcoreapp3.1\Parakeet.NetCore.Consumer.Standard.EnvironmentModule.deps.json
+D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Consumers\Parakeet.NetCore.ConsumerServer\bin\Debug\netcoreapp3.1\Plugins\netcoreapp3.1\Parakeet.NetCore.Consumer.Standard.EnvironmentModule.dll
+D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Consumers\Parakeet.NetCore.ConsumerServer\bin\Debug\netcoreapp3.1\Plugins\netcoreapp3.1\Parakeet.NetCore.Consumer.Standard.EnvironmentModule.pdb
+D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Consumers\Modules\Standard\Parakeet.NetCore.Consumer.Standard.Environment\obj\Debug\netcoreapp3.1\Parakeet.NetCore.Consumer.Standard.EnvironmentModule.csproj.AssemblyReference.cache
+D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Consumers\Modules\Standard\Parakeet.NetCore.Consumer.Standard.Environment\obj\Debug\netcoreapp3.1\Parakeet.NetCore.Consumer.Standard.EnvironmentModule.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Consumers\Modules\Standard\Parakeet.NetCore.Consumer.Standard.Environment\obj\Debug\netcoreapp3.1\Parakeet.NetCore.Consumer.Standard.EnvironmentModule.AssemblyInfoInputs.cache
+D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Consumers\Modules\Standard\Parakeet.NetCore.Consumer.Standard.Environment\obj\Debug\netcoreapp3.1\Parakeet.NetCore.Consumer.Standard.EnvironmentModule.AssemblyInfo.cs
+D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Consumers\Modules\Standard\Parakeet.NetCore.Consumer.Standard.Environment\obj\Debug\netcoreapp3.1\Parakeet.NetCore.Consumer.Standard.EnvironmentModule.csproj.CoreCompileInputs.cache
+D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Consumers\Modules\Standard\Parakeet.NetCore.Consumer.Standard.Environment\obj\Debug\netcoreapp3.1\Parakeet.NetCore.Consumer.Standard.EnvironmentModule.csproj.CopyComplete
+D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Consumers\Modules\Standard\Parakeet.NetCore.Consumer.Standard.Environment\obj\Debug\netcoreapp3.1\Parakeet.NetCore.Consumer.Standard.EnvironmentModule.dll
+D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Consumers\Modules\Standard\Parakeet.NetCore.Consumer.Standard.Environment\obj\Debug\netcoreapp3.1\Parakeet.NetCore.Consumer.Standard.EnvironmentModule.pdb

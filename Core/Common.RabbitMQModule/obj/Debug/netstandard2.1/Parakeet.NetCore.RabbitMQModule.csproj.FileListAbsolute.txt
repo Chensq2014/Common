@@ -1,0 +1,17 @@
+D:\Projects\ParakeetABPCore\aspnet-core\src\Core\Parakeet.NetCore.RabbitMQModule\bin\Debug\netstandard2.1\Localization\NetCore\en.json
+D:\Projects\ParakeetABPCore\aspnet-core\src\Core\Parakeet.NetCore.RabbitMQModule\bin\Debug\netstandard2.1\Localization\NetCore\zh-Hans.json
+D:\Projects\ParakeetABPCore\aspnet-core\src\Core\Parakeet.NetCore.RabbitMQModule\bin\Debug\netstandard2.1\Parakeet.NetCore.Domain.Shared.xml
+D:\Projects\ParakeetABPCore\aspnet-core\src\Core\Parakeet.NetCore.RabbitMQModule\bin\Debug\netstandard2.1\Parakeet.NetCore.RabbitMQModule.deps.json
+D:\Projects\ParakeetABPCore\aspnet-core\src\Core\Parakeet.NetCore.RabbitMQModule\bin\Debug\netstandard2.1\Parakeet.NetCore.RabbitMQModule.dll
+D:\Projects\ParakeetABPCore\aspnet-core\src\Core\Parakeet.NetCore.RabbitMQModule\bin\Debug\netstandard2.1\Parakeet.NetCore.RabbitMQModule.pdb
+D:\Projects\ParakeetABPCore\aspnet-core\src\Core\Parakeet.NetCore.RabbitMQModule\bin\Debug\netstandard2.1\Parakeet.NetCore.Domain.Shared.dll
+D:\Projects\ParakeetABPCore\aspnet-core\src\Core\Parakeet.NetCore.RabbitMQModule\bin\Debug\netstandard2.1\Parakeet.NetCore.Domain.Shared.pdb
+D:\Projects\ParakeetABPCore\aspnet-core\src\Core\Parakeet.NetCore.RabbitMQModule\obj\Debug\netstandard2.1\Parakeet.NetCore.RabbitMQModule.csproj.AssemblyReference.cache
+D:\Projects\ParakeetABPCore\aspnet-core\src\Core\Parakeet.NetCore.RabbitMQModule\obj\Debug\netstandard2.1\Parakeet.NetCore.RabbitMQModule.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\ParakeetABPCore\aspnet-core\src\Core\Parakeet.NetCore.RabbitMQModule\obj\Debug\netstandard2.1\Parakeet.NetCore.RabbitMQModule.AssemblyInfoInputs.cache
+D:\Projects\ParakeetABPCore\aspnet-core\src\Core\Parakeet.NetCore.RabbitMQModule\obj\Debug\netstandard2.1\Parakeet.NetCore.RabbitMQModule.AssemblyInfo.cs
+D:\Projects\ParakeetABPCore\aspnet-core\src\Core\Parakeet.NetCore.RabbitMQModule\obj\Debug\netstandard2.1\Parakeet.NetCore.RabbitMQModule.csproj.CoreCompileInputs.cache
+D:\Projects\ParakeetABPCore\aspnet-core\src\Core\Parakeet.NetCore.RabbitMQModule\obj\Debug\netstandard2.1\Parakeet.NetCore.RabbitMQModule.csproj.CopyComplete
+D:\Projects\ParakeetABPCore\aspnet-core\src\Core\Parakeet.NetCore.RabbitMQModule\obj\Debug\netstandard2.1\Parakeet.NetCore.RabbitMQModule.dll
+D:\Projects\ParakeetABPCore\aspnet-core\src\Core\Parakeet.NetCore.RabbitMQModule\obj\Debug\netstandard2.1\Parakeet.NetCore.RabbitMQModule.pdb
+D:\Projects\ParakeetABPCore\aspnet-core\src\Core\Parakeet.NetCore.RabbitMQModule\obj\Debug\netstandard2.1\Parakeet.NetCore.RabbitMQModule.sourcelink.json

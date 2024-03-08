@@ -1,0 +1,14 @@
+D:\Projects\Common\Core\Common.RabbitMQModule\obj\Debug\netstandard2.1\Common.RabbitMQModule.csproj.AssemblyReference.cache
+D:\Projects\Common\Core\Common.RabbitMQModule\obj\Debug\netstandard2.1\Common.RabbitMQModule.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Common\Core\Common.RabbitMQModule\obj\Debug\netstandard2.1\Common.RabbitMQModule.AssemblyInfoInputs.cache
+D:\Projects\Common\Core\Common.RabbitMQModule\obj\Debug\netstandard2.1\Common.RabbitMQModule.AssemblyInfo.cs
+D:\Projects\Common\Core\Common.RabbitMQModule\obj\Debug\netstandard2.1\Common.RabbitMQModule.csproj.CoreCompileInputs.cache
+D:\Projects\Common\Core\Common.RabbitMQModule\obj\Debug\netstandard2.1\Common.RabbitMQModule.sourcelink.json
+D:\Projects\Common\Core\Common.RabbitMQModule\bin\Debug\netstandard2.1\Common.RabbitMQModule.deps.json
+D:\Projects\Common\Core\Common.RabbitMQModule\bin\Debug\netstandard2.1\Common.RabbitMQModule.dll
+D:\Projects\Common\Core\Common.RabbitMQModule\bin\Debug\netstandard2.1\Common.RabbitMQModule.pdb
+D:\Projects\Common\Core\Common.RabbitMQModule\bin\Debug\netstandard2.1\Common.Shared.dll
+D:\Projects\Common\Core\Common.RabbitMQModule\bin\Debug\netstandard2.1\Common.Shared.pdb
+D:\Projects\Common\Core\Common.RabbitMQModule\obj\Debug\netstandard2.1\Common.RabbitMQModule.csproj.CopyComplete
+D:\Projects\Common\Core\Common.RabbitMQModule\obj\Debug\netstandard2.1\Common.RabbitMQModule.dll
+D:\Projects\Common\Core\Common.RabbitMQModule\obj\Debug\netstandard2.1\Common.RabbitMQModule.pdb

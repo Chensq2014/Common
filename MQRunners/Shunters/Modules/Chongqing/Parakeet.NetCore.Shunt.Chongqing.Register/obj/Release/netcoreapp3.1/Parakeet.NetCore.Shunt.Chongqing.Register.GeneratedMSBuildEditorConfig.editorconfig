@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = Parakeet.NetCore.Shunt.Chongqing.Register
+build_property.ProjectDir = D:\Projects\ParakeetABPCore\aspnet-core\src\MQRunners\Shunters\Modules\Chongqing\Parakeet.NetCore.Shunt.Chongqing.Register\

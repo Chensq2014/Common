@@ -1,0 +1,11 @@
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcClients\ARchGL.IOT.RoClient\bin\Debug\netstandard2.1\ARchGL.IOT.RoClient.xml
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcClients\ARchGL.IOT.RoClient\bin\Debug\netstandard2.1\ARchGL.IOT.RoClient.deps.json
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcClients\ARchGL.IOT.RoClient\bin\Debug\netstandard2.1\ARchGL.IOT.RoClient.dll
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcClients\ARchGL.IOT.RoClient\bin\Debug\netstandard2.1\ARchGL.IOT.RoClient.pdb
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcClients\ARchGL.IOT.RoClient\obj\Debug\netstandard2.1\ARchGL.IOT.RoClient.csproj.AssemblyReference.cache
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcClients\ARchGL.IOT.RoClient\obj\Debug\netstandard2.1\ARchGL.IOT.RoClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcClients\ARchGL.IOT.RoClient\obj\Debug\netstandard2.1\ARchGL.IOT.RoClient.AssemblyInfoInputs.cache
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcClients\ARchGL.IOT.RoClient\obj\Debug\netstandard2.1\ARchGL.IOT.RoClient.AssemblyInfo.cs
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcClients\ARchGL.IOT.RoClient\obj\Debug\netstandard2.1\ARchGL.IOT.RoClient.csproj.CoreCompileInputs.cache
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcClients\ARchGL.IOT.RoClient\obj\Debug\netstandard2.1\ARchGL.IOT.RoClient.dll
+D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcClients\ARchGL.IOT.RoClient\obj\Debug\netstandard2.1\ARchGL.IOT.RoClient.pdb

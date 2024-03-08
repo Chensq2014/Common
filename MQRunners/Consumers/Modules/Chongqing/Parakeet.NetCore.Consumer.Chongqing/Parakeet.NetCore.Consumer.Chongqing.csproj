@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\..\Parakeet.NetCore.ConsumerServer\bin\Debug\netcoreapp3.1\Plugins\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\..\Parakeet.NetCore.ConsumerServer\bin\Release\netcoreapp3.1\Plugins\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Parakeet.NetCore.Consumer\Parakeet.NetCore.Consumer.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = ARchGL.IOT.RoClient
+build_property.ProjectDir = D:\Projects\ParakeetABPCore\aspnet-core\src\Grpc\GrpcClients\ARchGL.IOT.RoClient\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

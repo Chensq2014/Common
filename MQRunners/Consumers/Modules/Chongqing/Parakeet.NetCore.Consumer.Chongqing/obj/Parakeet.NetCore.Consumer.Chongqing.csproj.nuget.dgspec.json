@@ -1,0 +1,784 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\MQRunners\\Consumers\\Modules\\Chongqing\\Parakeet.NetCore.Consumer.Chongqing\\Parakeet.NetCore.Consumer.Chongqing.csproj": {}
+  },
+  "projects": {
+    "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Core\\Parakeet.NetCore.RabbitMQModule\\Parakeet.NetCore.RabbitMQModule.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Core\\Parakeet.NetCore.RabbitMQModule\\Parakeet.NetCore.RabbitMQModule.csproj",
+        "projectName": "Parakeet.NetCore.RabbitMQModule",
+        "projectPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Core\\Parakeet.NetCore.RabbitMQModule\\Parakeet.NetCore.RabbitMQModule.csproj",
+        "packagesPath": "C:\\Users\\parakeet\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Core\\Parakeet.NetCore.RabbitMQModule\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\parakeet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Domain.Shared\\Parakeet.NetCore.Domain.Shared.csproj": {
+                "projectPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Domain.Shared\\Parakeet.NetCore.Domain.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.Extensions.ObjectPool": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            },
+            "System.Threading.Tasks.Dataflow": {
+              "target": "Package",
+              "version": "[4.11.1, )"
+            },
+            "Volo.Abp": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\MQRunners\\Consumers\\Modules\\Chongqing\\Parakeet.NetCore.Consumer.Chongqing\\Parakeet.NetCore.Consumer.Chongqing.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\MQRunners\\Consumers\\Modules\\Chongqing\\Parakeet.NetCore.Consumer.Chongqing\\Parakeet.NetCore.Consumer.Chongqing.csproj",
+        "projectName": "Parakeet.NetCore.Consumer.Chongqing",
+        "projectPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\MQRunners\\Consumers\\Modules\\Chongqing\\Parakeet.NetCore.Consumer.Chongqing\\Parakeet.NetCore.Consumer.Chongqing.csproj",
+        "packagesPath": "C:\\Users\\parakeet\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\MQRunners\\Consumers\\Modules\\Chongqing\\Parakeet.NetCore.Consumer.Chongqing\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\parakeet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\MQRunners\\Consumers\\Parakeet.NetCore.Consumer\\Parakeet.NetCore.Consumer.csproj": {
+                "projectPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\MQRunners\\Consumers\\Parakeet.NetCore.Consumer\\Parakeet.NetCore.Consumer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\MQRunners\\Consumers\\Parakeet.NetCore.Consumer\\Parakeet.NetCore.Consumer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\MQRunners\\Consumers\\Parakeet.NetCore.Consumer\\Parakeet.NetCore.Consumer.csproj",
+        "projectName": "Parakeet.NetCore.Consumer",
+        "projectPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\MQRunners\\Consumers\\Parakeet.NetCore.Consumer\\Parakeet.NetCore.Consumer.csproj",
+        "packagesPath": "C:\\Users\\parakeet\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\MQRunners\\Consumers\\Parakeet.NetCore.Consumer\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\parakeet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Core\\Parakeet.NetCore.RabbitMQModule\\Parakeet.NetCore.RabbitMQModule.csproj": {
+                "projectPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Core\\Parakeet.NetCore.RabbitMQModule\\Parakeet.NetCore.RabbitMQModule.csproj"
+              },
+              "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Application.Contracts\\Parakeet.NetCore.Application.Contracts.csproj": {
+                "projectPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Application.Contracts\\Parakeet.NetCore.Application.Contracts.csproj"
+              },
+              "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.EntityFrameworkCore\\Parakeet.NetCore.EntityFrameworkCore.csproj": {
+                "projectPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.EntityFrameworkCore\\Parakeet.NetCore.EntityFrameworkCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.Extensions.Http.Polly": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Volo.Abp.AspNetCore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.Autofac": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Application.Contracts\\Parakeet.NetCore.Application.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Application.Contracts\\Parakeet.NetCore.Application.Contracts.csproj",
+        "projectName": "Parakeet.NetCore.Application.Contracts",
+        "projectPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Application.Contracts\\Parakeet.NetCore.Application.Contracts.csproj",
+        "packagesPath": "C:\\Users\\parakeet\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Application.Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\parakeet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Domain.Shared\\Parakeet.NetCore.Domain.Shared.csproj": {
+                "projectPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Domain.Shared\\Parakeet.NetCore.Domain.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "AlibabaCloud.SDK.Dm20151123": {
+              "target": "Package",
+              "version": "[1.0.4, )"
+            },
+            "DevExtreme.AspNet.Data": {
+              "target": "Package",
+              "version": "[2.8.2, )"
+            },
+            "Volo.Abp.Account.Application.Contracts": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.FeatureManagement.Application.Contracts": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.Identity.Application.Contracts": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.PermissionManagement.Application.Contracts": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.TenantManagement.Application.Contracts": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Domain.Shared\\Parakeet.NetCore.Domain.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Domain.Shared\\Parakeet.NetCore.Domain.Shared.csproj",
+        "projectName": "Parakeet.NetCore.Domain.Shared",
+        "projectPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Domain.Shared\\Parakeet.NetCore.Domain.Shared.csproj",
+        "packagesPath": "C:\\Users\\parakeet\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Domain.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\parakeet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Caching.CSRedis": {
+              "target": "Package",
+              "version": "[3.6.5, )"
+            },
+            "EasyCaching.CSRedis": {
+              "target": "Package",
+              "version": "[0.9.0, )"
+            },
+            "EasyCaching.Redis": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            },
+            "EasyCaching.Serialization.MessagePack": {
+              "target": "Package",
+              "version": "[0.9.0, )"
+            },
+            "Exceptionless.AspNetCore": {
+              "target": "Package",
+              "version": "[4.6.2, )"
+            },
+            "IdGen": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Irony.NetCore": {
+              "target": "Package",
+              "version": "[1.1.11, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.Extensions.Caching.Redis": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.DependencyModel": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "NEST": {
+              "target": "Package",
+              "version": "[7.12.1, )"
+            },
+            "NPinyin.Core": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "PinYinConverterCore": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.3.9, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Serilog.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Sinks.Async": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[4.7.2, )"
+            },
+            "Volo.Abp.AuditLogging.Domain.Shared": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.BackgroundJobs.Domain.Shared": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.Caching": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.Ddd.Application": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.Ddd.Domain": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.FeatureManagement.Domain.Shared": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.Identity.Domain.Shared": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.IdentityServer.Domain.Shared": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.MailKit": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.PermissionManagement.Domain.Shared": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.SettingManagement.Domain.Shared": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.TenantManagement.Domain.Shared": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.UI": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "ZKWeb.System.Drawing": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Domain\\Parakeet.NetCore.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Domain\\Parakeet.NetCore.Domain.csproj",
+        "projectName": "Parakeet.NetCore.Domain",
+        "projectPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Domain\\Parakeet.NetCore.Domain.csproj",
+        "packagesPath": "C:\\Users\\parakeet\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\parakeet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Domain.Shared\\Parakeet.NetCore.Domain.Shared.csproj": {
+                "projectPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Domain.Shared\\Parakeet.NetCore.Domain.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Atom.Base64Url": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "FreeSql.Provider.MySql": {
+              "target": "Package",
+              "version": "[3.0.100, )"
+            },
+            "FreeSql.Provider.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.0.100, )"
+            },
+            "FreeSql.Provider.SqlServer": {
+              "target": "Package",
+              "version": "[3.0.100, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "NPOI.Core.Extension": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[1.0.0-beta0007, )"
+            },
+            "SixLabors.ImageSharp.Drawing": {
+              "target": "Package",
+              "version": "[1.0.0-beta0007, )"
+            },
+            "Volo.Abp.AuditLogging.Domain": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.BackgroundJobs.Domain": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.FeatureManagement.Domain": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.Identity.Domain": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.IdentityServer.Domain": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.PermissionManagement.Domain.Identity": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.PermissionManagement.Domain.IdentityServer": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.SettingManagement.Domain": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.TenantManagement.Domain": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.EntityFrameworkCore\\Parakeet.NetCore.EntityFrameworkCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.EntityFrameworkCore\\Parakeet.NetCore.EntityFrameworkCore.csproj",
+        "projectName": "Parakeet.NetCore.EntityFrameworkCore",
+        "projectPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.EntityFrameworkCore\\Parakeet.NetCore.EntityFrameworkCore.csproj",
+        "packagesPath": "C:\\Users\\parakeet\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.EntityFrameworkCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\parakeet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Domain\\Parakeet.NetCore.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ParakeetABPCore\\aspnet-core\\src\\Parakeet.NetCore.Domain\\Parakeet.NetCore.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "EFCore.BulkExtensions": {
+              "target": "Package",
+              "version": "[3.5.5, )"
+            },
+            "Messaia.Net.PostgreSQL.BulkExtensions": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            },
+            "Volo.Abp.AuditLogging.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.BackgroundJobs.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.Dapper": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.EntityFrameworkCore.MySQL": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.EntityFrameworkCore.PostgreSql": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.FeatureManagement.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.IdentityServer.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.PermissionManagement.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.SettingManagement.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Volo.Abp.TenantManagement.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

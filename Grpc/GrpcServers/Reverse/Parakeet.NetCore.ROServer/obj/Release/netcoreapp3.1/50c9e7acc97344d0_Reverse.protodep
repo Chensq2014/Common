@@ -1,0 +1,2 @@
+obj\Release\netcoreapp3.1/Reverse.cs \
+obj\Release\netcoreapp3.1/ReverseGrpc.cs: ../../../Protos/Reverse.proto

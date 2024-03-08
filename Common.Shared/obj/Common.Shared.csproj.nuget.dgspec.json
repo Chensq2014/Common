@@ -55,17 +55,69 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Caching.CSRedis": {
+              "target": "Package",
+              "version": "[3.6.5, )"
+            },
+            "EasyCaching.CSRedis": {
+              "target": "Package",
+              "version": "[0.9.0, )"
+            },
+            "EasyCaching.Redis": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            },
+            "EasyCaching.Serialization.MessagePack": {
+              "target": "Package",
+              "version": "[0.9.0, )"
+            },
             "MiniExcel": {
               "target": "Package",
               "version": "[1.31.3, )"
+            },
+            "NEST": {
+              "target": "Package",
+              "version": "[7.12.1, )"
+            },
+            "NPinyin.Core": {
+              "target": "Package",
+              "version": "[3.0.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "PinYinConverterCore": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Serilog.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Sinks.Async": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
             "System.Drawing.Common": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "Volo.Abp.Core": {
               "target": "Package",
@@ -101,9 +153,29 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "Caching.CSRedis": {
+              "target": "Package",
+              "version": "[3.6.5, )"
+            },
+            "EasyCaching.CSRedis": {
+              "target": "Package",
+              "version": "[0.9.0, )"
+            },
+            "EasyCaching.Redis": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            },
+            "EasyCaching.Serialization.MessagePack": {
+              "target": "Package",
+              "version": "[0.9.0, )"
+            },
             "MiniExcel": {
               "target": "Package",
               "version": "[1.31.3, )"
+            },
+            "NEST": {
+              "target": "Package",
+              "version": "[7.12.1, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -111,13 +183,45 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "NPinyin.Core": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "PinYinConverterCore": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Serilog.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Sinks.Async": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
             "System.Drawing.Common": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "Volo.Abp.Core": {
               "target": "Package",
@@ -148,17 +252,69 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "dependencies": {
+            "Caching.CSRedis": {
+              "target": "Package",
+              "version": "[3.6.5, )"
+            },
+            "EasyCaching.CSRedis": {
+              "target": "Package",
+              "version": "[0.9.0, )"
+            },
+            "EasyCaching.Redis": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            },
+            "EasyCaching.Serialization.MessagePack": {
+              "target": "Package",
+              "version": "[0.9.0, )"
+            },
             "MiniExcel": {
               "target": "Package",
               "version": "[1.31.3, )"
+            },
+            "NEST": {
+              "target": "Package",
+              "version": "[7.12.1, )"
+            },
+            "NPinyin.Core": {
+              "target": "Package",
+              "version": "[3.0.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "PinYinConverterCore": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Serilog.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Sinks.Async": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
             "System.Drawing.Common": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "Volo.Abp.Core": {
               "target": "Package",

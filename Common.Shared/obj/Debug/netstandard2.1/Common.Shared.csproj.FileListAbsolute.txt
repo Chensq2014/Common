@@ -8,3 +8,4 @@ D:\Projects\Common\Common.Shared\obj\Debug\netstandard2.1\Common.Shared.Assembly
 D:\Projects\Common\Common.Shared\obj\Debug\netstandard2.1\Common.Shared.csproj.CoreCompileInputs.cache
 D:\Projects\Common\Common.Shared\obj\Debug\netstandard2.1\Common.Shared.dll
 D:\Projects\Common\Common.Shared\obj\Debug\netstandard2.1\Common.Shared.pdb
+D:\Projects\Common\Common.Shared\obj\Debug\netstandard2.1\Common.Shared.sourcelink.json

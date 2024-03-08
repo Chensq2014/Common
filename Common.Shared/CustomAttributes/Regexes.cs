@@ -270,17 +270,17 @@ namespace Common.CustomAttributes
         //    return IsMatch(inputStr, patternStr, ifIgnoreCase, false);
         //}
 
-        ///// <summary>  
-        ///// 验证字符串是否匹配正则表达式描述的规则  
-        ///// </summary>  
-        ///// <param name="inputStr">待验证的字符串</param>  
-        ///// <param name="patternStr">正则表达式字符串</param>  
-        ///// <param name="ifValidateWhiteSpace">是否验证空白字符串</param>  
-        ///// <returns>是否匹配</returns>  
-        //public static bool IsMatch(string inputStr, string patternStr, bool ifValidateWhiteSpace)
-        //{
-        //    return IsMatch(inputStr, patternStr, false, ifValidateWhiteSpace);
-        //}
+        /// <summary>  
+        /// 验证字符串是否匹配正则表达式描述的规则  
+        /// </summary>  
+        /// <param name="inputStr">待验证的字符串</param>  
+        /// <param name="patternStr">正则表达式字符串</param>  
+        /// <param name="ifValidateWhiteSpace">是否验证空白字符串</param>  
+        /// <returns>是否匹配</returns>  
+        public static bool IsMatch(string inputStr, string patternStr, bool ifValidateWhiteSpace)
+        {
+            return IsMatch(inputStr, patternStr, false, ifValidateWhiteSpace);
+        }
 
         /// <summary>  
         /// 验证字符串是否匹配正则表达式描述的规则  

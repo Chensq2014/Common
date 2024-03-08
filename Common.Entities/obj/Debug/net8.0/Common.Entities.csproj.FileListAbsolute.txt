@@ -13,3 +13,4 @@ D:\Projects\Common\Common.Entities\obj\Debug\net8.0\Common.Entities.dll
 D:\Projects\Common\Common.Entities\obj\Debug\net8.0\refint\Common.Entities.dll
 D:\Projects\Common\Common.Entities\obj\Debug\net8.0\Common.Entities.pdb
 D:\Projects\Common\Common.Entities\obj\Debug\net8.0\ref\Common.Entities.dll
+D:\Projects\Common\Common.Entities\obj\Debug\net8.0\Common.Entities.sourcelink.json

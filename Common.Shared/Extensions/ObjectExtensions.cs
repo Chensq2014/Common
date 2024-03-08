@@ -75,7 +75,7 @@ namespace Common.Extensions
         /// <returns></returns>
         public static string ToJson(this object obj, JsonSerializerSettings setting)
         {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(obj, setting);
+            return JsonConvert.SerializeObject(obj, setting);
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace Common.Extensions
         /// <returns></returns>
         public static string ToJson<T>(this object obj)
         {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(obj, typeof(T), DefaultJsonSetting);
+            return JsonConvert.SerializeObject(obj, typeof(T), DefaultJsonSetting);
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace Common.Extensions
         /// <returns></returns>
         public static string ToJson<T>(this object obj, JsonSerializerSettings setting)
         {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(obj, typeof(T), setting);
+            return JsonConvert.SerializeObject(obj, typeof(T), setting);
         }
     }
 }

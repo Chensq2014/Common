@@ -14,7 +14,7 @@ namespace Common.CustomAttributes
         public override bool Validate<T>(T value)
         {
             //暂用Id属性
-            var parent = value.GetType().GetField("Id").GetCustomAttribute<EnumParentAttribute>();
+            var parent = value?.GetType()?.GetField("Id")?.GetCustomAttribute<EnumParentAttribute>();
             return parent != null;
         }
     }

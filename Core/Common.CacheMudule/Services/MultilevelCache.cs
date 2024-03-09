@@ -1,9 +1,9 @@
-﻿using EasyCaching.Core;
-using System;
+﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using EasyCaching.Core;
 
-namespace Common.Storage
+namespace Common.Cache
 {
     /// <summary>
     /// 多级缓存

@@ -1,10 +1,9 @@
-﻿using Common.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Common.Storage
+namespace Common.Cache
 {
     /// <summary>
     /// 缓存容器

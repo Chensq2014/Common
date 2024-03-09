@@ -3,16 +3,17 @@
 	<Import Project="..\..\Config\common.props" />
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
-		<RootNamespace>Common.CacheMudule</RootNamespace>
+		<RootNamespace>Common.Cache</RootNamespace>
 	</PropertyGroup>
-	<ItemGroup>
-	  <Compile Remove="Interfaces\**" />
-	  <EmbeddedResource Remove="Interfaces\**" />
-	  <None Remove="Interfaces\**" />
-	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Caching.CSRedis" Version="3.8.800" />
+		<PackageReference Include="EasyCaching.CSRedis" Version="1.9.2" />
+		<PackageReference Include="EasyCaching.Redis" Version="1.9.2" />
+		<PackageReference Include="EasyCaching.Serialization.MessagePack" Version="1.9.2" />
 		<PackageReference Include="Volo.Abp" Version="8.0.4" />
+		<PackageReference Include="Volo.Abp.Caching.StackExchangeRedis" Version="8.0.4" />
+		<PackageReference Include="Volo.Abp.DistributedLocking" Version="8.0.4" />
 		<PackageReference Include="Volo.Abp.Caching.StackExchangeRedis" Version="8.0.4" />
 	</ItemGroup>
 	<ItemGroup>

@@ -1,39 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Common.Entities
 {
     /// <summary>
     /// 许可证
     /// </summary>
-    [Table("parakeet_Licenses", Schema = "parakeet")]
+    //[Table("parakeet_Licenses", Schema = "parakeet")]
     public class License : BaseEntity
     {
-        public License() { }
+        public License()
+        {
+        }
+
         public License(Guid id)
         {
-            SetEntityPrimaryKey(id);
+            base.SetEntityPrimaryKey(id);
         }
 
         /// <summary>
         /// AppId
         /// </summary>
-        [Description("AppId"), MaxLength(CommonConsts.MaxLength64)]
+        [Description("AppId")]
         public string AppId { get; set; }
 
         /// <summary>
         /// AppKey
         /// </summary>
-        [Description("AppKey"), MaxLength(CommonConsts.MaxLength64)]
+        [Description("AppKey")]
         public string AppKey { get; set; }
 
         /// <summary>
-        /// AppSecret
+        /// AppId
         /// </summary>
-        [Description("AppSecret"), MaxLength(CommonConsts.MaxLength255)]
+        [Description("AppId")]
         public string AppSecret { get; set; }
 
         /// <summary>
@@ -51,7 +52,7 @@ namespace Common.Entities
         /// <summary>
         /// 名称
         /// </summary>
-        [Description("名称"), MaxLength(CommonConsts.MaxLength64)]
+        [Description("名称")]
         public string Name { get; set; }
 
         /// <summary>

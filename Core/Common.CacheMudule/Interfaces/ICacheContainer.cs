@@ -1,8 +1,8 @@
-﻿using Common.Storage;
+﻿
 using System;
 using System.Threading.Tasks;
 
-namespace Common.Interfaces
+namespace Common.Cache
 {
     /// <summary>
     /// 缓存容器

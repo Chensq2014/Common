@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <Import Project="..\Config\common.props" />
 
@@ -7,11 +7,11 @@
     <RootNamespace>Common</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Common.Shared\Common.Shared.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="NPOI.Core.Extension" Version="1.0.0" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Projects\" />
+	<ItemGroup>
+    <ProjectReference Include="..\Common.Shared\Common.Shared.csproj" />
   </ItemGroup>
 </Project>

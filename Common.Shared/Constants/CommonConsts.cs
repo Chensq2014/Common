@@ -23,21 +23,26 @@
         #endregion
 
         #region 系统默认
-        public const string AppName = "NetCore";
+        public const string AppName = "Parakeet";
 
         /// <summary>
         /// 系统默认的bundle名称
         /// </summary>
         public const string GlobalBundleName = "Basic.Global";
 
-        public const string LocalizationSourceName = "NetCore";
-
+        public const string LocalizationSourceName = "Net";
+        
         public const string ConnectionStringName = "Default";//SqlServer/PgSql/MySql
+        public const string DefaultConnectStringName = "Default";
+        public const string TenantConnectStringName = "Tenant";
+        public const string MutiTenantConnectionStringName = "MutiTenant";// MutiTenant SqlServer/PgSql/MySql
         public const string SqlServerConnectionStringName = "SqlServer";
         public const string PgSqlConnectionStringName = "PgSql";
         public const string MySqlConnectionStringName = "MySql";
+        
+        public const string TenantKey = "__tenantId";//多租户key
 
-        public const bool MultiTenancyEnabled = true;//禁用多租户false
+        public const bool MultiTenancyEnabled = true;//多租户开关 禁用多租户false
         #endregion
 
         #region 默认格式
@@ -66,6 +71,11 @@
         #endregion
 
         #region 缓存组 暂未使用
+
+        public const string Redis = "Redis";
+        public const string RedisConn = "Redis:Configuration";
+        public const string CsRedisConn = "Redis:CsRedisConfiguration";
+
         /// <summary>
         /// 个性化验证/验证码缓存组
         /// </summary>

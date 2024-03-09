@@ -1,5 +1,7 @@
-﻿using Microsoft.Extensions.Options;
-using Common.Dtos;
+﻿using Common.Dtos;
+using Common.Interfaces;
+using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Options;
 using ServiceStack;
 using ServiceStack.Redis;
 using ServiceStack.Text;
@@ -10,23 +12,20 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Caching.Distributed;
-using Serilog;
-using Serilog.Core;
 
-namespace Common.CacheMudule
+namespace Common.Cache
 {
     /// <summary>
     /// ServiceStack.Redis CacheClient 可以重新封装实现IDistributedCache接口
     /// </summary>
-    public class ServiceStackRedisCache : IDistributedCache, IDisposable
+    public class ServiceStackRedisCache : IDistributedCache, IHandlerType, IDisposable
     {
         #region 基础字段属性
 
         /// <summary>
         /// ServiceStack
         /// </summary>
-        public string Name = "ServiceStack";
+        public string HandlerType => "ServiceStack";
 
         /// <summary>
         /// 连接字符串配置
@@ -49,7 +48,9 @@ namespace Common.CacheMudule
         public ServiceStackRedisCache(IOptionsMonitor<RedisConnOptions> redisOption)
         {
             this._redisOptions = redisOption.CurrentValue;
-            _client = new RedisClient(_redisOptions.Host, _redisOptions.Port, null, _redisOptions.DatabaseId);
+            
+            //ServiceStack 暂还不支持.Net7 
+            //_client = new RedisClient(_redisOptions.Host, _redisOptions.Port, null, _redisOptions.DatabaseId);
         }
 
 
@@ -64,7 +65,7 @@ namespace Common.CacheMudule
             }, string.Empty);
         }
         #endregion
-        
+
         #region 获取client 更改db
         /// <summary>
         /// 获取client
@@ -88,7 +89,7 @@ namespace Common.CacheMudule
         #endregion
 
         #region 异常处理
-        
+
         /// <summary>
         /// 异常处理
         /// </summary>
@@ -208,7 +209,7 @@ namespace Common.CacheMudule
         #endregion
 
         #region 自增自减
-        
+
         /// <summary>
         /// 自增
         /// </summary>
@@ -307,7 +308,7 @@ namespace Common.CacheMudule
         #endregion
 
         #region 清空 移除
-        
+
         /// <summary>
         /// 清空
         /// </summary>
@@ -318,7 +319,7 @@ namespace Common.CacheMudule
                 this._client.FlushAll();
             }, string.Empty);
         }
-        
+
 
         /// <summary>
         /// 根据key移除
@@ -342,12 +343,12 @@ namespace Common.CacheMudule
             }, keys.FirstOrDefault<string>());
         }
 
-        
+
 
         #endregion
 
         #region 替换
-        
+
         /// <summary>
         /// 替换key
         /// </summary>
@@ -398,12 +399,12 @@ namespace Common.CacheMudule
         /// <param name="key"></param>
         /// <param name="value"></param>
         /// <returns></returns>
-        
+
         public bool Set<T>(string key, T value)
         {
             return this.TryCatch<bool>(() => this._client.Set<T>(key, value), key);
         }
-        
+
         /// <summary>
         /// 设置泛型缓存带过期时间DateTime
         /// </summary>
@@ -429,7 +430,7 @@ namespace Common.CacheMudule
         {
             return this.TryCatch<bool>(() => this._client.Set<T>(key, value, expiresIn), key);
         }
-        
+
         /// <summary>
         /// 根据字典设置泛型缓存
         /// </summary>
@@ -447,7 +448,7 @@ namespace Common.CacheMudule
         #endregion
 
         #region 根据对象信息删除缓存
-        
+
         /// <summary>
         /// 根据泛型删除
         /// </summary>
@@ -500,9 +501,9 @@ namespace Common.CacheMudule
         }
 
         #endregion
-        
+
         #region 根据对象信息获取缓存
-        
+
         /// <summary>
         /// 根据对象Id信息获取缓存
         /// </summary>
@@ -557,7 +558,7 @@ namespace Common.CacheMudule
         #endregion
 
         #region List
-        
+
         /// <summary>
         /// 添加到list缓存
         /// </summary>
@@ -729,7 +730,7 @@ namespace Common.CacheMudule
                 this._client.AddItemToSet(setId, item);
             }, setId);
         }
-        
+
         /// <summary>
         /// 添加范围到set
         /// </summary>
@@ -742,7 +743,7 @@ namespace Common.CacheMudule
                 this._client.AddRangeToSet(setId, items);
             }, setId);
         }
-       
+
         public HashSet<string> GetAllItemsFromSet(string setId)
         {
             return this.TryCatch<HashSet<string>>(() => this._client.GetAllItemsFromSet(setId), setId);
@@ -1313,7 +1314,6 @@ namespace Common.CacheMudule
         #endregion
 
         #region 各种设置缓存
-
         
         public void SetAll(Dictionary<string, string> map)
         {

@@ -1,25 +1,19 @@
-﻿using System;
+﻿using Common.Extensions;
+using MiniExcelLibs.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using Common.Extensions;
-using MiniExcelLibs.Attributes;
 using Volo.Abp.Auditing;
 using Volo.Abp.Data;
 using Volo.Abp.Domain.Entities;
+using Volo.Abp.MultiTenancy;
 using Volo.Abp.ObjectExtending;
 using Volo.Abp.Uow;
 
 namespace Common.Entities
 {
-    /// <summary>
-    /// 自定义EntityBase 便于对基类字段设置属性
-    /// </summary>
-    public abstract class EntityBase : EntityBase<Guid>
-    {
-
-    }
     public abstract class EntityBase<TKey> :
         IFullAuditedObject,
         IHasEntityVersion,
@@ -116,18 +110,21 @@ namespace Common.Entities
 
         protected EntityBase()
         {
-            ConcurrencyStamp = GuidExtensions.NewIdString();
-            ExtraProperties = new ExtraPropertyDictionary();
-            this.SetDefaultsForExtraProperties();
+            Init();
         }
 
         protected EntityBase(TKey id)
         {
             Id = id;
+            Init();
+            EntityHelper.TrySetTenantId(this);
+        }
+
+        private void Init()
+        {
             ConcurrencyStamp = GuidExtensions.NewIdString();
             ExtraProperties = new ExtraPropertyDictionary();
             this.SetDefaultsForExtraProperties();
-            EntityHelper.TrySetTenantId(this);
         }
 
         ///// <summary>
@@ -180,4 +177,27 @@ namespace Common.Entities
 
     }
 
+    /// <summary>
+    /// 自定义EntityBase 便于对基类字段设置属性
+    /// </summary>
+    public abstract class EntityBase : EntityBase<Guid>
+    {
+
+    }
+
+    public abstract class TenantEntityBase<Tkey> : EntityBase<Tkey>, IMultiTenant
+    {
+        /// <summary>
+        /// 租户Id
+        /// </summary>
+        public Guid? TenantId { get; set; }
+    }
+
+    public abstract class TenantEntityBase : TenantEntityBase<Guid>
+    {
+        /// <summary>
+        /// 租户Id
+        /// </summary>
+        public Guid? TenantId { get; set; }
+    }
 }

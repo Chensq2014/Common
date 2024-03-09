@@ -10,6 +10,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="FreeSql.Provider.MySql" Version="3.2.693" />
+		<PackageReference Include="FreeSql.Provider.SqlServer" Version="3.2.693" />
+		<PackageReference Include="FreeSql.Provider.PostgreSQL" Version="3.2.693" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
 		<PackageReference Include="IdGen" Version="3.0.0" />
 		<PackageReference Include="Irony.NetCore" Version="1.1.11" />
 		<PackageReference Include="ZKWeb.System.Drawing" Version="4.0.1" />
@@ -25,6 +30,8 @@
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 		<PackageReference Include="System.Text.Json" Version="8.0.0" />
 		<PackageReference Include="System.Drawing.Common" Version="8.0.2" />
+		<PackageReference Include="SixLabors.ImageSharp" Version="1.0.0-beta0007" />
+		<PackageReference Include="SixLabors.ImageSharp.Drawing" Version="1.0.0-beta0007" />
 		<PackageReference Include="Serilog.AspNetCore" Version="8.0.0" />
 		<PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
 		<PackageReference Include="Serilog.Sinks.Console" Version="5.0.0" />

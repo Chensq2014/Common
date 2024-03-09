@@ -23,7 +23,7 @@ namespace Common.Helpers
         /// <summary>
         /// csredis数据库连接地址
         /// </summary>
-        public static string CsRedisConfigurationBase => GetValue("CSREDISCONFIGURATIONBASE", $"localhost:6379,password=,prefix=iot");
+        public static string CsRedisConfigurationBase => GetValue("CSREDISCONFIGURATIONBASE", $"127.0.0.1:6379,password=,prefix=iot");
 
         /// <summary>
         /// StackRedisConn连接地址
@@ -31,8 +31,13 @@ namespace Common.Helpers
         public static string StackRedisConn => GetValue("STACKREDISCONN", $"127.0.0.1:6379");
 
         /// <summary>
+        /// ExchangeRedisConn连接地址
+        /// </summary>
+        public static string ExchangeRedisConn => GetValue("EXCHANGEREDISCONN", $"127.0.0.1:6379");
+
+        /// <summary>
         /// 枚举类型所在程序集名 EnumAssemblyNames
-        /// "Common.Domain.Shared,Common.Application", //枚举类型所在程序集名称,逗号分隔 
+        /// "Parakeet.Net.Domain.Shared,Parakeet.Net.Application", //枚举类型所在程序集名称,逗号分隔 
         /// </summary>
         public static string EnumAssemblyNames => GetValue("ENUMASSEMBLY_NAMES", typeof(EnvironmentHelper).Assembly.GetName().Name);
 
@@ -45,7 +50,17 @@ namespace Common.Helpers
         /// 当前程序根目录
         /// </summary>
         public static string RootPath => Environment.GetFolderPath(Environment.SpecialFolder.Programs);
-        
+
+        /// <summary>
+        /// 字体目录 默认@"C:\Windows\Fonts\arial.ttf"
+        /// </summary>
+        public static string FontPath => GetValue("APPFONTPATH", @"C:\Windows\Fonts\arial.ttf");
+
+        /// <summary>
+        /// Watermark路径 默认 https://www.parakeet.vip
+        /// </summary>
+        public static string Watermark => GetValue("WATERMARK", @"https://www.parakeet.vip");
+
         #endregion
 
         #region GetValue方法 Environment launchSetting只能配置 字符串数字和布尔类型 
@@ -81,7 +96,7 @@ namespace Common.Helpers
         #region RedisConnections
 
         /// <summary>
-        /// 获取csRedis 16个db连接集合
+        /// 获取CsRedis 16个db连接集合
         /// </summary>
         /// <returns></returns>
         public static List<string> GetCsRedisDbConnections()

@@ -147,25 +147,25 @@ namespace Common.Dtos
         /// 房间合计
         /// </summary>
         [Description("房间合计")]
-        public decimal HouseTotal => Sections.Sum(m => m.HouseTotal);
+        public decimal? HouseTotal => Sections.Sum(m => m.HouseTotal);
 
         /// <summary>
         /// 总工价
         /// </summary>
         [Description("总工价")]
-        public decimal CostTotal => Sections.Sum(m => m.CostTotal);
+        public decimal? CostTotal => Sections.Sum(m => m.CostTotal);
 
         /// <summary>
         /// 总利润
         /// </summary>
         [Description("总利润")]
-        public decimal ProfitTotal => Sections.Sum(m => m.ProfitTotal);
+        public decimal? ProfitTotal => Sections.Sum(m => m.ProfitTotal);
 
         /// <summary>
         /// 用工总计
         /// </summary>
         [Description("用工总计")]
-        public decimal WorkerTotal => Sections.Sum(m => m.WorkerTotal);
+        public decimal? WorkerTotal => Sections.Sum(m => m.WorkerTotal);
 
         #endregion
 

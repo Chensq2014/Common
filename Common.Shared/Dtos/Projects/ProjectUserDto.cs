@@ -1,5 +1,4 @@
-﻿using Common.Dtos;
-using System;
+﻿using System;
 using System.ComponentModel;
 
 namespace Common.Dtos

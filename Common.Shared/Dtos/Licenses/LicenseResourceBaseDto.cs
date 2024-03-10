@@ -1,24 +1,12 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using Volo.Abp.Application.Dtos;
 
-namespace Common.Entities
+namespace Common.Dtos
 {
-    /// <summary>
-    /// 许可证资源
-    /// </summary>
-    //[Table("parakeet_LicenseResources", Schema = "parakeet")]
-    public class LicenseResource : BaseEntity//Entity<Guid>
+    public class LicenseResourceBaseDto : EntityDto<Guid>
     {
-        public LicenseResource()
-        {
-        }
-
-        public LicenseResource(Guid id)
-        {
-            base.SetEntityPrimaryKey(id);//Id = id;
-        }
-
         /// <summary>
         /// 资源名称
         /// </summary>
@@ -40,7 +28,7 @@ namespace Common.Entities
         /// <summary>
         /// 如果类型为1=webApi，那么将匹配请求资源路由，支持正则表达式，如：^/api.*
         /// </summary>
-        [MaxLength(CommonConsts.MaxLength128), Description("如果类型为1=webApi，那么将匹配请求资源路由，支持正则表达式，如：^/api.*")]
+        [MaxLength(128), Description("如果类型为1=webApi，那么将匹配请求资源路由，支持正则表达式，如：^/api.*")]
         public string Path { get; set; }
 
         /// <summary>
@@ -54,10 +42,5 @@ namespace Common.Entities
         /// </summary>
         [Description("LicenseId")]
         public Guid LicenseId { get; set; }
-
-        /// <summary>
-        /// License
-        /// </summary>
-        public virtual License License { get; set; }
     }
 }

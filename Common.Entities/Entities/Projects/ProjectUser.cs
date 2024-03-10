@@ -1,5 +1,4 @@
 ﻿using Common.CustomAttributes;
-using Microsoft.AspNetCore.Identity;
 using System;
 using System.ComponentModel;
 
@@ -42,11 +41,11 @@ namespace Common.Entities
         [Description("用户")]
         public Guid? UserId { get; set; }
 
-        /// <summary>
-        /// 用户
-        /// </summary>
-        [NotSet, Description("用户")]
-        public virtual IdentityUser User { get; set; }
+        ///// <summary>
+        ///// 用户
+        ///// </summary>
+        //[NotSet, Description("用户")]
+        //public virtual IdentityUser User { get; set; }
 
         #endregion
     }

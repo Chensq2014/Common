@@ -11,6 +11,11 @@ namespace Common.Helpers
         #region  属性
 
         /// <summary>
+        /// 有序Guid类型0 mysql/pg  2 oracle 3 sqlserver
+        /// </summary>
+        public static int DefaultSequentialGuidType => GetValue("GUID_TYPE", 0);
+
+        /// <summary>
         /// 数据库类型 1 sqlserver 2 mysql 3 pgsql
         /// </summary>
         public static int DatabaseType => GetValue("DATABASE_TYPE", 3);
@@ -37,7 +42,7 @@ namespace Common.Helpers
 
         /// <summary>
         /// 枚举类型所在程序集名 EnumAssemblyNames
-        /// "Parakeet.Net.Domain.Shared,Parakeet.Net.Application", //枚举类型所在程序集名称,逗号分隔 
+        /// "Common.Domain.Shared,Common.Application", //枚举类型所在程序集名称,逗号分隔 
         /// </summary>
         public static string EnumAssemblyNames => GetValue("ENUMASSEMBLY_NAMES", typeof(EnvironmentHelper).Assembly.GetName().Name);
 

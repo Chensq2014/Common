@@ -7,7 +7,7 @@ using Volo.Abp.Domain.Entities;
 namespace Common.Entities
 {
     /// <summary>
-    /// 租户连接字符串信息
+    /// 自定义租户连接字符串信息
     /// </summary>
     [Table("parakeet_TenantDbConnectionStrings", Schema = "parakeet")]
     [Description("租户连接字符串信息")]

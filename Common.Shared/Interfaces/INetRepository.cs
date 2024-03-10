@@ -13,21 +13,21 @@ namespace Common.Interfaces
     /// </summary>
     /// <typeparam name="TEntity">实体</typeparam>
     /// <typeparam name="TPrimaryKey">实体主键类型</typeparam>
-    public interface INetCoreRepository<TEntity, TPrimaryKey>
+    public interface INetRepository<TEntity, TPrimaryKey>
         : IRepository<TEntity, TPrimaryKey>
         where TEntity : BaseEntity<TPrimaryKey>//Entity<TPrimaryKey>//
     {
-        #region SqlServer Bulk
+        #region sqlserver/mysql/pgsql Bulk
 
         /// <summary>
-        /// sqlserver 批量插入
+        /// sqlserver/mysql/pgsql 批量插入
         /// </summary>
         /// <param name="entities"></param>
         /// <returns></returns>
         Task BulkInsertAsync(IList<TEntity> entities);
 
         /// <summary>
-        /// sqlserver 批量删除
+        /// sqlserver/mysql/pgsql 批量删除
         /// </summary>
         /// <param name="entities"></param>
         /// <returns></returns>
@@ -35,19 +35,9 @@ namespace Common.Interfaces
 
         #endregion
 
-        #region PostgreSQL Bulk
-
-        /// <summary>
-        /// Messaia.Net.PostgreSQL.BulkExtensions 批量插入
-        /// </summary>
-        /// <param name="entities"></param>
-        /// <returns></returns>
-        Task PostgreBulkInsert(IEnumerable<TEntity> entities);
-
-        #endregion
     }
 
-    public interface INetCoreRepository<TEntity> : INetCoreRepository<TEntity, Guid>
+    public interface INetRepository<TEntity> : INetRepository<TEntity, Guid>
         where TEntity : BaseEntity//Entity<Guid> //
     {
         #region sql参数化 cqrs 的一个解决方案

@@ -39,6 +39,7 @@ namespace Common.Helpers
         public static string RandomIdCard()
         {
             return $"500223{DateTime.Now.AddYears(new Random().Next(-30, -20)):yyyyMMdd}1751";
+            //return $"500152{DateTime.Now.AddYears(new Random().Next(-5, 0)):yyyyMMdd}1757";
         }
     }
 }

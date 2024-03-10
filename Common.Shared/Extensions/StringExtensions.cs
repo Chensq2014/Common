@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Xml.Serialization;
 using Common.CustomAttributes;
+using System.Collections.Generic;
 
 namespace Common.Extensions
 {
@@ -112,6 +113,38 @@ namespace Common.Extensions
         public static T ToJson<T>(this string source, Type sourceType)
         {
             return (T)JsonConvert.DeserializeObject(source, sourceType);
+        }
+
+        /// <summary>
+        /// 将JSON字符串转换为匿名类型
+        /// </summary>
+        /// <typeparam name="T">匿名类型</typeparam>
+        /// <param name="json">JSON字符串 </param>
+        /// <param name="anonymousTypeObject">匿名类型</param>
+        /// <returns></returns>
+        public static T FromJsonString<T>(this string json, T anonymousTypeObject)
+        {
+            return string.IsNullOrWhiteSpace(json)
+                ? default(T)
+                : JsonConvert.DeserializeAnonymousType(json, anonymousTypeObject);
+        }
+
+        /// <summary>
+        /// 将JSON字符串转成对象
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="json">JSON字符串 </param>
+        /// <param name="converters">JSON转换器</param>
+        /// <returns></returns>
+        public static T FromJsonString<T>(this string json, IEnumerable<JsonConverter> converters)
+        {
+            if (string.IsNullOrWhiteSpace(json))
+            {
+                return default(T);
+            }
+            var settings = new JsonSerializerSettings();
+            (settings.Converters as List<JsonConverter>)?.AddRange(converters);
+            return JsonConvert.DeserializeObject<T>(json, settings);
         }
 
         /// <summary>
@@ -252,10 +285,10 @@ namespace Common.Extensions
         public static string ToInitialCapitalization(this string str)
         {
             return Regex.Replace(str, Regexes.CamelCaseFirst, match =>
-           {
-               string v = match.ToString();
-               return Char.ToUpper(v[0]) + v.Substring(1);
-           });
+            {
+                string v = match.ToString();
+                return Char.ToUpper(v[0]) + v.Substring(1);
+            });
         }
 
         //public static string ToInitialCapitalization2(string s)

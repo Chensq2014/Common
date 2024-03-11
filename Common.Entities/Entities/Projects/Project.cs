@@ -1,5 +1,4 @@
 ﻿using Common.CustomAttributes;
-using Common.Entities.Devices;
 using Common.ValueObjects;
 using System;
 using System.Collections.Generic;

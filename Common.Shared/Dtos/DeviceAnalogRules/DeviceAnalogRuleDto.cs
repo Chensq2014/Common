@@ -1,47 +1,48 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Common.Entities
+namespace Common.Dtos
 {
     /// <summary>
-    /// 数据模拟规则
+    /// 设备模拟数据规则
     /// </summary>
-    [Description("数据模拟规则")]
-    [Table("parakeet_DeviceAnalogRules", Schema = "parakeet")]
-    public class DeviceAnalogRule : BaseEntity
+    public class DeviceAnalogRuleDto : BaseDto//EntityDto<Guid>
     {
-        public DeviceAnalogRule()
-        {
-        }
-
-        public DeviceAnalogRule(Guid id)
-        {
-            base.SetEntityPrimaryKey(id);
-        }
-
         /// <summary>
         /// 设备Id
         /// </summary>
-        [Required, Description("设备Id")]
+        [Description("设备Id")]
         public Guid DeviceId { get; set; }
 
         /// <summary>
-        /// 设备
+        /// 设备名称
         /// </summary>
-        public virtual Device Device { get; set; }
+        [MaxLength(100), Description("设备名称")]
+        public string DeviceName { get; set; }
+
+        /// <summary>
+        /// 设备编码（对外提供设备序列号）
+        /// </summary>
+        [Required, MaxLength(50), Description("设备编码")]
+        public string FakeNo { get; set; }
+
+        /// <summary>
+        /// 设备信息
+        /// </summary>
+        [Description("设备信息")]
+        public virtual DeviceListDto Device { get; set; }
 
         /// <summary>
         /// 发送数据频率 时间间隔
         /// </summary>
-        [Required, Description("频率/时间间隔")]
-        public TimeSpan Period { get; set; }
+        [Description("频率/时间间隔")]
+        public TimeSpan Period { get; set; } = new TimeSpan(1,0,0,0);
 
         /// <summary>
         /// 最后一次发送数据时间
         /// </summary>
-        [Required, Description("最后一次发送数据时间")]
+        [Description("最后一次发送数据时间")]
         public DateTime LastSendTime { get; set; } = DateTime.Now;
 
         /// <summary>

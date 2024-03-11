@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using Volo.Abp.Domain.Entities;
 
-namespace Common.Entities.Devices
+namespace Common.Entities
 {
     /// <summary>
     /// 设备转发

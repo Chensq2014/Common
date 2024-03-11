@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 
-namespace Common.Entities.Devices
+namespace Common.Entities
 {
     /// <summary>
     /// 设备

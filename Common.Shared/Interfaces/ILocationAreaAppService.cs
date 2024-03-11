@@ -8,7 +8,7 @@ using DevExtreme.AspNet.Data;
 using DevExtreme.AspNet.Data.ResponseModel;
 using Volo.Abp.Application.Dtos;
 
-namespace Common.LocationAreas
+namespace Common.Interfaces
 {
     /// <summary>
     /// 省市区区域服务

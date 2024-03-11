@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Common.Entities.Devices
+namespace Common.Entities
 {
     /// <summary>
     /// 设备人员

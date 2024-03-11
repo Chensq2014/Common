@@ -1,5 +1,4 @@
-﻿using Common.Entities.Devices;
-using Common.Enums;
+﻿using Common.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

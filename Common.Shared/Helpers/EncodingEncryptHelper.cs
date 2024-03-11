@@ -10,40 +10,74 @@ namespace Common.Helpers
     /// </summary>
     public class EncodingEncryptHelper
     {
-        
-        public static byte[] AbcToChar(byte[] chars)
+        /// <summary>
+        /// 正处理 可逆
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static byte[] AbcToChar(byte[] source)
         {
-            return chars;
+            List<byte> list = new List<byte>();
+            for (int i = 0; i < (source.Length - 1); i += 2)
+            {
+                int num2 = source[i] - 0x61;
+                int num3 = source[i + 1] - 0x61;
+                list.Add((byte)((num2 * 0x1a) + num3));
+            }
+            return list.ToArray();
         }
-
         
-        public static byte[] CharToAbc(byte[] chars)
+        /// <summary>
+        /// 反处理 可逆
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static byte[] CharToAbc(byte[] source)
         {
-            return chars;
+            List<byte> list = new List<byte>();
+            //char[] chArray2 = new char[] {
+            //    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+            //    'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+            //};
+            for (int i = 0; i < source.Length; i++)
+            {
+                //if (i == 0x1d)
+                //{
+                //    i = 0x1d;
+                //}
+                int num2 = source[i];
+                list.Add((byte)((num2 / 0x1a) + 0x61));
+                list.Add((byte)((num2 % 0x1a) + 0x61));
+            }
+            return list.ToArray();
         }
 
         /// <summary>
         /// 数据加密方法
+        /// 加密：字符串A---->GetBytes得到二进制数组B -->B加密二进制C->C被处理二进制D-->GetString(D)-->加密字符串E
+        /// 解密：加密字符串E--->GetBytes(E)得到二进制D-->D反处理二进制C--->C反加密二进制B--->GetString(二进制数组B)-->字符串A
         /// </summary>
         /// <param name="source"></param>
         /// <returns></returns>
         public static string Encrypt(string source)
         {
-            return Encoding.Default.GetString(CharToAbc(Encrypt(Encoding.Default.GetBytes(string.Join("", source)), true)));
+            return Encoding.UTF8.GetString(CharToAbc(Encrypt(Encoding.UTF8.GetBytes(source), true)));
         }
 
         /// <summary>
-        /// 数据加密方法
+        /// 数据解密方法
+        /// 加密：字符串A---->GetBytes得到二进制数组B -->B加密二进制C->C被处理二进制D-->GetString(D)-->加密字符串E
+        /// 解密：加密字符串E--->GetBytes(E)得到二进制D-->D反处理二进制C--->C反加密二进制B--->GetString(二进制数组B)-->字符串A
         /// </summary>
         /// <param name="source"></param>
         /// <returns></returns>
         public static string DEncrypt(string source)
         {
-            return Encoding.Default.GetString(Encrypt(AbcToChar(Encoding.Default.GetBytes(source)),false));
+            return Encoding.UTF8.GetString(Encrypt(AbcToChar(Encoding.UTF8.GetBytes(source)),false));
         }
 
         /// <summary>
-        /// 数据加密方法
+        /// 数据加密方法 根据flag 可逆处理数据源与结果
         /// </summary>
         /// <param name="source"></param>
         /// <param name="flag"></param>

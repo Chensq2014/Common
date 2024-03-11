@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Common.Entities.Devices
+namespace Common.Entities
 {
     /// <summary>
     /// 设备记录的父类

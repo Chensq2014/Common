@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using Common.Entities.Devices;
 
 namespace Common.Entities
 {

@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Volo.Abp.Domain.Entities;
 
-namespace Common.Entities.Devices
+namespace Common.Entities
 {
     /// <summary>
     /// 设备编号自增序列

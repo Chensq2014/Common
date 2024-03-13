@@ -1,13 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="..\Config\common.props" />
+	<Import Project="..\Config\common.props" />
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>Common</RootNamespace>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<RootNamespace>Common</RootNamespace>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Common.Entities\Common.Entities.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.Identity.Domain" Version="8.0.4" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Common.Entities\Common.Entities.csproj" />
+	</ItemGroup>
 </Project>

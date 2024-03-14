@@ -130,7 +130,11 @@ namespace Common.Entities
                     if (dirInfo.Parent != null && dirInfo.Parent.Exists)
                     {
                         //删除文件夹要特别谨慎
-                        FileExtension.ClearDir(dirInfo.Parent.FullName);
+                        //FileExtension.ClearDir(dirInfo.Parent.FullName);
+                        if (Directory.Exists(dirInfo.Parent.FullName))
+                        {
+                            Directory.Delete(dirInfo.Parent.FullName, true);//删除这个目录及文件
+                        }
                     }
                 }
                 Attachments.RemoveWhere(m => m.NeedId == Id);

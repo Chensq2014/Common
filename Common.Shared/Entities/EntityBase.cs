@@ -8,6 +8,7 @@ using System.ComponentModel.DataAnnotations;
 using Volo.Abp.Auditing;
 using Volo.Abp.Data;
 using Volo.Abp.Domain.Entities;
+using Volo.Abp.Guids;
 using Volo.Abp.MultiTenancy;
 using Volo.Abp.ObjectExtending;
 using Volo.Abp.Uow;
@@ -115,7 +116,7 @@ namespace Common.Entities
 
         protected EntityBase(TKey id)
         {
-            Id = id;
+            Id = id; 
             Init();
             EntityHelper.TrySetTenantId(this);
         }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Common.Dtos
+﻿namespace Common.Dtos
 {
     /// <summary>
     /// 配置文件

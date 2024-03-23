@@ -1,5 +1,7 @@
-﻿using System.Text.Encodings.Web;
+﻿using Microsoft.Extensions.Options;
+using System.Text.Encodings.Web;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Text.Unicode;
 
 namespace Common.Extensions
@@ -13,7 +15,7 @@ namespace Common.Extensions
         {
             Encoder = JavaScriptEncoder.Create(UnicodeRanges.All),
             PropertyNamingPolicy = JsonNamingPolicy.CamelCase,//序列化后驼峰命名规则
-            IgnoreNullValues = true,
+            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
             //MaxDepth = 1//导航属性序列化深度 默认为0
         };
 

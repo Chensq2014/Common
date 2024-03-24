@@ -84,12 +84,12 @@ namespace Common.Emails
         /// <returns></returns>
         public ResponseWrapper<object> ModifyPWByDomain(ModifyPWByDomainRequest input);
 
-        /// <summary>
-        /// 设置发信地址的通知地址 UpdateMailAddressMsgCallBackUrlWithOptions
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        public ResponseWrapper<object> UpdateMailAddressMsgCallBackUrl(UpdateMailAddressMsgCallBackUrlRequest input);
+        ///// <summary>
+        ///// 设置发信地址的通知地址 UpdateMailAddressMsgCallBackUrlWithOptions
+        ///// </summary>
+        ///// <param name="input"></param>
+        ///// <returns></returns>
+        //public ResponseWrapper<object> UpdateMailAddressMsgCallBackUrl(UpdateMailAddressMsgCallBackUrlRequest input);
 
         /// <summary>
         /// 查询无效地址 QueryInvalidAddressWithOptions

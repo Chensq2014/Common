@@ -42,7 +42,7 @@
         
         public const string TenantKey = "__tenantId";//多租户key
 
-        public const bool MultiTenancyEnabled = true;//多租户开关 禁用多租户false
+        public const bool MultiTenancyEnabled = false;//多租户开关 禁用多租户false
         #endregion
 
         #region 默认格式

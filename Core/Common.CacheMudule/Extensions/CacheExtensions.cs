@@ -116,7 +116,6 @@ namespace Common.Cache.Extensions
             //竟然没有ServiceStack 的EasyCaching 扩展
             services.AddEasyCaching(options =>
             {
-                //StackExchange.Redis
                 options.UseRedis(redisOptions =>
                 {
                     redisOptions.DBConfig = new RedisDBOptions
@@ -126,7 +125,7 @@ namespace Common.Cache.Extensions
                         //SslHost = "",
                         Username = "",
                         //Password = "",
-                        Configuration = configuration["Redis:Configuration"],
+                        Configuration = EncodingEncryptHelper.DEncrypt(configuration["Redis:Configuration"]),
                         ConnectionTimeout = 5000
                     };
                     redisOptions.SerializerName = "parakeet";
@@ -168,7 +167,7 @@ namespace Common.Cache.Extensions
                         //Database=0,
                         //AllowAdmin=false,
                         //AbortOnConnectFail=false
-                        Configuration = configuration["Redis:Configuration"],
+                        Configuration = EncodingEncryptHelper.DEncrypt(configuration["Redis:Configuration"]),
                         //KeyPrefix = $"",
                         AsyncTimeout = 5000,
                         SyncTimeout = 5000,
@@ -199,7 +198,8 @@ namespace Common.Cache.Extensions
         public static void ConfigAbpDistributeCacheOptions(this IServiceCollection services, string redisConnectionString = "")
         {
             var configuration = services.GetConfiguration();
-            //redisConnectionString = string.IsNullOrWhiteSpace(redisConnectionString) ? configuration["Redis:CsRedisConfiguration"] : string.Empty;
+            //var redisConnectionStringConfig = EncodingEncryptHelper.DEncrypt(configuration["Redis:CsRedisConfiguration"]);
+            //redisConnectionString = string.IsNullOrWhiteSpace(redisConnectionString) ? redisConnectionStringConfig : string.Empty;
 
             ////services.AddDistributedMemoryCache();
             ////配置分布式缓存，那么系统使用session时保存的session就会存在redis里，确保分布式后session的正常使用
@@ -214,7 +214,7 @@ namespace Common.Cache.Extensions
             //AbpCachingModule 里面默认配置了20分钟 前缀可再单独配置
             services.Configure<AbpDistributedCacheOptions>(options =>
             {
-                options.KeyPrefix = "Net:"; //默认key前缀  与
+                options.KeyPrefix = "net:"; //默认key前缀  与
                 //缓存默认过期时间设置为2h
                 options.GlobalCacheEntryOptions.SlidingExpiration = TimeSpan.FromHours(2);
 
